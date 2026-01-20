@@ -1,11 +1,11 @@
 import { Input } from "../ui/Input/Input";
 import type { InputProps } from "../../types/form";
-// import { validateCartValueInput } from "../../utils/validate";
+import { validateAmountFoodLogInput } from "../../utils/validate";
 
 const AmountFoodLog = ({ value, error, onChange }: InputProps) => {
   const handleChangeFoodAmount = (value: string) => {
-    // const validationError = validateCartValueInput(value);
-    // onChange(value, validationError);
+    const validationError = validateAmountFoodLogInput(value);
+    onChange(value, validationError);
   };
   return (
     <Input

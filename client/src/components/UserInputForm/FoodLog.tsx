@@ -1,10 +1,10 @@
 import type { InputProps } from "../../types/form";
-import { validateVenueSlugInput } from "../../utils/validate";
+import { validateFoodLogInput } from "../../utils/validate";
 import { Input } from "../ui/Input/Input";
 
 const FoodLog = ({ value, error, onChange }: InputProps) => {
   const handleChangeFoodLog = (value: string) => {
-    const validationError = validateVenueSlugInput(value);
+    const validationError = validateFoodLogInput(value);
     onChange(value, validationError);
   };
 

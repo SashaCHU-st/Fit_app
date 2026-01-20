@@ -1,24 +1,24 @@
 import Button from "../ui/Button/Button";
 import { Spinner } from "../ui/primitives/Spinner";
 
-type CalculateDeliveryPriceButtonProps = {
+type CalculateNutritionButtonProps = {
   loading: boolean;
 };
 
-const CalculateCaloriesButton = ({
+const CalculateNutritionButton = ({
   loading,
-}: CalculateDeliveryPriceButtonProps) => {
+}: CalculateNutritionButtonProps) => {
   return (
     <Button
       type="submit"
       disabled={loading}
-      data-test-id="calculateFoodCalories"
+      data-test-id="calculateFoodNutrition"
       variant="contained"
       startIcon={loading ? <Spinner /> : null}
     >
-      {loading ? "Calculating" : "Calculate Food Calories"}
+      {loading ? "Calculating" : "Calculate Food Nutrition"}
     </Button>
   );
 };
 
-export default CalculateCaloriesButton;
+export default CalculateNutritionButton;

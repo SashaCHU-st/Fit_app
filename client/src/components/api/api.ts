@@ -42,7 +42,7 @@ const fetchWithTimeout = async (
 export const FoodData = async (foodLog: string): Promise<FoodApiResponse> => {
   const response = await fetchWithTimeout(
     `https://world.openfoodfacts.org/cgi/search.pl?search_terms=${foodLog}&search_simple=1&action=process&json=1&page_size=1`,
-    5000,
+    9000,
   );
   const data = await response.json();
   console.log(data);
