@@ -1,0 +1,15 @@
+export const colors = {
+  primary: "#009de0",
+  primary1: "#ebf7fd",
+  primary2: "rgb(0, 77, 153)",
+  hover: "#1fa9e4",
+  hover1: "#d6effa",
+  error: "#d32f2f",
+  info: "#eaf9ffff",
+  warning: "#ffe3e3ff",
+  textPrimary: "#1c1c1c",
+  textSecondary: "#6b6b6b",
+  muted: "#6b6b6b",
+  border: "#c4c4c4",
+  background: "#ffffff",
+};

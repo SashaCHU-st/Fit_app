@@ -1,0 +1,49 @@
+import { styled } from "@linaria/react";
+import { colors } from "../../../styles/theme";
+
+export const ButtonRoot = styled.button`
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 40px;
+  margin-top: 30px;
+  padding: 15px 16px;
+  // box-shadow: 5px 5px 5px 5px ${colors.border};
+
+  display: inline-flex;
+  border-style: ridge;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  font-size: 25px;
+  font-family: "Inter", system-ui, sans-serif;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+
+  background-color: ${colors.primary};
+  color: #ffffff;
+  border: none;
+
+  &[data-variant="outlined"] {
+    background-color: ${colors.primary1};
+    color: ${colors.primary2};
+    // border: 1px solid ${colors.primary};
+    &:hover {
+      background-color: ${colors.hover1};
+    }
+  }
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+
+  &:hover {
+    background-color: ${colors.hover};
+  }
+  // &:active {
+  //   box-shadow: none;
+  //   transform: translateY(4px);
+  // }
+`;
