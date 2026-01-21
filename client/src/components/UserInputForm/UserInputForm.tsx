@@ -5,11 +5,11 @@ import { initialForm, initialEmptyErrors } from "./model/initialState";
 import FoodLog from "./FoodLog";
 import AmountFoodLog from "./AmountFoodLog";
 import CalculateCaloriesButton from "./CalculateCaloriesButton";
-// import { FoodData } from "../api/api";
 import MealTypeSelect from "./MealTypeSelect";
 import { calculateNutrition } from "../../utils/calculateNutrition";
 
 export interface NutritionBreakdownData {
+  mealType: string;
   update?: boolean;
   calories: number;
   proteins: number;
@@ -38,11 +38,7 @@ const UserInputForm = ({
     setIsLoading(true);
     try {
       const results = await calculateNutrition(userForm);
-      console.log(results.calories.toFixed(2));
-      console.log(results.fat.toFixed(2));
-      console.log(results.carbohydrates.toFixed(2));
-      console.log(results.proteins.toFixed(2));
-      onSubmit(results)
+      onSubmit(results);
     } catch (error) {
       console.error("FoodData error:", error);
     } finally {
@@ -61,13 +57,13 @@ const UserInputForm = ({
   return (
     <section>
       <form onSubmit={handleSubmit}>
-        <TitleH1>Calories Food Calculator</TitleH1>
+        <TitleH1>Nutrition Food Calculator</TitleH1>
         <TitleH2>Details</TitleH2>
         <MealTypeSelect
-          value={userForm.mealTypeInput}
+          value={userForm.mealType}
           error={userFormError.mealTypeError}
           onChange={(v, e) => {
-            handleChange({ mealTypeInput: v }, { mealTypeError: e });
+            handleChange({ mealType: v }, { mealTypeError: e });
           }}
         />
         <FoodLog

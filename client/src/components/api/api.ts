@@ -17,7 +17,6 @@ export interface FoodApiResponse {
   products: FoodProduct[];
 }
 
-
 const fetchWithTimeout = async (
   url: string,
   timeoutMs: number,

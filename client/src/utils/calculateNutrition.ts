@@ -4,6 +4,7 @@ import type { UserForm } from "../types/form";
 export const calculateNutrition = async ({
   foodLogInput,
   amountFoodLogInput,
+  mealType,
 }: UserForm) => {
   const data = await FoodData(foodLogInput);
   const amountFoodLogBreakDown = Number(amountFoodLogInput) / 100;
@@ -15,11 +16,11 @@ export const calculateNutrition = async ({
   const fat = nutriments.fat_100g * amountFoodLogBreakDown;
   const cal = energyKcal * amountFoodLogBreakDown;
 
-  console.log("FoodData response:", nutriments);
-  console.log("Carbo", carbo);
-  console.log("Protein", protein);
-  console.log("FAT", fat);
-  console.log("Calories", cal);
+  // console.log("FoodData response:", nutriments);
+  // console.log("Carbo", carbo);
+  // console.log("Protein", protein);
+  // console.log("FAT", fat);
+  // console.log("Calories", cal);
 
   return {
     calories: cal,
@@ -27,5 +28,6 @@ export const calculateNutrition = async ({
     proteins: protein,
     fat,
     amountFoodLogBreakDown,
+    mealType,
   };
 };

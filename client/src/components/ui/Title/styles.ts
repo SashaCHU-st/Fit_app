@@ -15,3 +15,12 @@ export const TitleH2 = styled.h2`
   margin-bottom: 30;
   font-size: 1.5rem;
 `;
+
+export const TitleH3 = styled.p`
+  font-family: system-ui;
+
+  line-height: 1;
+  margin-bottom: 30;
+  padding:20;
+  font-size: 1.2rem;
+`;

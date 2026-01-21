@@ -12,4 +12,7 @@ export const colors = {
   muted: "#6b6b6b",
   border: "#c4c4c4",
   background: "#ffffff",
+  low:"#ffd0d0b7",
+  good:"#e1ffd0b7",
+  high:"#d0f7ffb7",
 };

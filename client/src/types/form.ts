@@ -1,7 +1,7 @@
 export interface UserForm {
   foodLogInput: string;
   amountFoodLogInput: string;
-  mealTypeInput: string;
+  mealType: string;
 }
 export interface UserFormError {
   foodLogError: string | null;

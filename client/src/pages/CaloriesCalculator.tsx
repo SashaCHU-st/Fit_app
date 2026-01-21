@@ -6,6 +6,7 @@ import { BreakdownWrapper } from "../components/ui/primitives/BreakdownWrapper";
 import NutritionBreakdown from "../components/NutritionBreakdown/NutritionBreakdown";
 
 export interface NutritionBreakdownData {
+  mealType: string;
   update?: boolean;
   calories: number;
   proteins: number;
@@ -35,7 +36,17 @@ const CaloriesCalculator = () => {
             }}
           />
           <BreakdownWrapper data-open={Boolean(formData)}>
-            {formData && <NutritionBreakdown />}
+            {formData && (
+              <NutritionBreakdown
+                mealType={formData.mealType}
+                update={update}
+                calories={formData.calories}
+                proteins={formData.proteins}
+                carbohydrates={formData.carbohydrates}
+                fat={formData.fat}
+                amountFoodLogBreakDown={formData.amountFoodLogBreakDown}
+              />
+            )}
           </BreakdownWrapper>
         </CalculatorFrame>
       </MainPageLayout>
