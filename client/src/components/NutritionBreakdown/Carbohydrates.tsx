@@ -1,21 +1,16 @@
 import { Text } from "../ui/Text/Text";
 import { Row } from "../ui/primitives/Row";
 import { getFlag } from "../../utils/getFlag";
-import { MEAL_RECOMMENDATIONS } from "../../utils/recommendations";
+import type { BreakdownProps } from "../../types/breakdown";
 
-interface CarbohydratesProps {
-  value: number;
-  mealType: keyof typeof MEAL_RECOMMENDATIONS;
-}
-
-const Carbohydrates = ({ value, mealType }: CarbohydratesProps) => {
+const Carbohydrates = ({ value, mealType }: BreakdownProps) => {
   const flag = getFlag(value, mealType, "carbs");
 
   return (
     <Row data-flag={flag}>
       <Text component="dt">Carbohydrates</Text>
       <Text data-test-id="carbohydrates" component="dd">
-        {value.toFixed(2)}
+        {value.toFixed(2)} gr
       </Text>
     </Row>
   );

@@ -16,11 +16,6 @@ export const calculateNutrition = async ({
   const fat = nutriments.fat_100g * amountFoodLogBreakDown;
   const cal = energyKcal * amountFoodLogBreakDown;
 
-  // console.log("FoodData response:", nutriments);
-  // console.log("Carbo", carbo);
-  // console.log("Protein", protein);
-  // console.log("FAT", fat);
-  // console.log("Calories", cal);
 
   return {
     calories: cal,

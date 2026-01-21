@@ -6,7 +6,7 @@ export interface UserForm {
 export interface UserFormError {
   foodLogError: string | null;
   amountFoodLogError: string | null;
-  mealTypeError: string | null;
+  mealTypeError?: string | null;
 }
 
 export interface InputProps {

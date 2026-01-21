@@ -31,11 +31,6 @@ const Summary = ({
     .filter(([_, f]) => f === "high")
     .map(([k]) => k);
 
-  // const parts: string[] = [];
-  // if (low.length) parts.push(`You are low on ${low.join(", ")}`);
-  // if (high.length)
-  //   parts.push(`It would be better to reduce ${high.join(", ")}`);
-
   const lowList = low.join(", ");
   const highList = high.join(", ");
 

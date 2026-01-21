@@ -1,7 +1,7 @@
-import type { InputProps } from "../../types/form";
 import { Select } from "../ui/Select/Select";
 
 const options = [
+  { label: "Choose meal", value: "none" },
   { label: "Breakfast", value: "breakfast" },
   { label: "Lunch", value: "lunch" },
   { label: "Dinner", value: "dinner" },
@@ -10,7 +10,7 @@ const options = [
 
 interface MealTypeProps {
   value: string;
-  error: InputProps["error"];
+  error?: string | null;
   onChange: (value: string, error: string | null) => void;
 }
 

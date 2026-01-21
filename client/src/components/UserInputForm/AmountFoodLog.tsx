@@ -10,9 +10,8 @@ const AmountFoodLog = ({ value, error, onChange }: InputProps) => {
   return (
     <Input
       type="number"
-      // step={0.1}
       id="foodAmount"
-      label="Food Amount"
+      label="Food Amount (max 1000 gr)"
       value={value}
       error={error}
       placeholder="e.g 100"
