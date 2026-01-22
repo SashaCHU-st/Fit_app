@@ -6,7 +6,7 @@ import { BreakdownWrapper } from "../components/ui/primitives/BreakdownWrapper";
 import NutritionBreakdown from "../components/NutritionBreakdown/NutritionBreakdown";
 import type { NutritionBreakdownData } from "../types/form";
 
-const CaloriesCalculator = () => {
+const NutritionCalculator = () => {
   const [formData, setFormData] = useState<NutritionBreakdownData | null>(null);
   const [update, setUpdate] = useState<boolean>(false);
   return (
@@ -46,4 +46,4 @@ const CaloriesCalculator = () => {
   );
 };
 
-export default CaloriesCalculator;
+export default NutritionCalculator;

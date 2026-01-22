@@ -1,7 +1,7 @@
-import CaloriesCalculator from "./pages/CaloriesCalculator";
+import AppRouter from "./router/AppRouter";
 
 function App() {
-  return <CaloriesCalculator />;
+  return <AppRouter />;
 }
 
 export default App;

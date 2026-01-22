@@ -21,7 +21,7 @@ export const ButtonRoot = styled.button`
   border-radius: 4px;
   cursor: pointer;
 
-  background-color: ${colors.primary};
+  background-color: ${colors.button};
   color: #ffffff;
   border: none;
 
@@ -32,7 +32,7 @@ export const ButtonRoot = styled.button`
   }
 
   &:hover {
-    background-color: ${colors.hover};
+    background-color: ${colors.buttonHover};
   }
   // &:active {
   //   box-shadow: none;

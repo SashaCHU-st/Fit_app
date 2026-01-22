@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "../pages/Home";
-import CaloriesCalculator from "../pages/CaloriesCalculator";
+import CaloriesCalculator from "../pages/NutritionCalculator";
 
 const AppRouter = () => {
   return (
@@ -8,7 +8,7 @@ const AppRouter = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
-        <Route path="/caloriesCalculator" element={<CaloriesCalculator />} />
+        <Route path="/nutritionCalculator" element={<CaloriesCalculator />} />
       </Routes>
     </BrowserRouter>
   );
