@@ -4,6 +4,9 @@ export const PageWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  overflow: hidden;
+  background: #dfffeb;
 `;
 
 export const CenterContainer = styled.div`
@@ -11,4 +14,6 @@ export const CenterContainer = styled.div`
   max-width: 600px;
   display: flex;
   justify-content: center;
+  position: relative;
+  z-index: 1;
 `;
