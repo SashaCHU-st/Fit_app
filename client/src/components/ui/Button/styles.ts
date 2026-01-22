@@ -25,7 +25,6 @@ export const ButtonRoot = styled.button`
   color: #ffffff;
   border: none;
 
-
   &:disabled {
     opacity: 0.6;
     cursor: not-allowed;

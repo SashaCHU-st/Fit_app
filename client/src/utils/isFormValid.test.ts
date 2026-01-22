@@ -5,7 +5,7 @@ import type { UserForm, UserFormError } from "../types/form";
 const validForm: UserForm = {
   foodLogInput: "banana",
   amountFoodLogInput: "20",
-  mealType:"breakfast"
+  mealType: "breakfast",
 };
 
 const noErrors: UserFormError = {

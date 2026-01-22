@@ -1,4 +1,8 @@
-import { PageWrapper, CenterContainer, NavZone } from "../ui/primitives/MainLayout";
+import {
+  PageWrapper,
+  CenterContainer,
+  NavZone,
+} from "../ui/primitives/MainLayout";
 import ParticleBackground from "../background/ParticleBackground";
 import type { ReactNode } from "react";
 import TopNav from "./TopNav";

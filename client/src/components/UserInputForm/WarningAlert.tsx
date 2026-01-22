@@ -6,7 +6,11 @@ interface WarningAlertProps {
 
 const WarningAlert = ({ value }: WarningAlertProps) => {
   return (
-    <StyledAlert data-test-id="warning" role="warning" data-open={Boolean(value)}>
+    <StyledAlert
+      data-test-id="warning"
+      role="warning"
+      data-open={Boolean(value)}
+    >
       {value}
     </StyledAlert>
   );

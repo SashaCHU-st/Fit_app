@@ -14,12 +14,12 @@ export const summaryFlags = ({
     carbs: getFlag(carbohydrates, mealType, "carbs"),
   };
   const low = Object.entries(flags)
-    .filter(([_, f]) => f === "low")
-    .map(([k]) => k);
+    .filter((entry) => entry[1] === "low")
+    .map((entry) => entry[0]);
 
   const high = Object.entries(flags)
-    .filter(([_, f]) => f === "high")
-    .map(([k]) => k);
+    .filter((entry) => entry[1] === "high")
+    .map((entry) => entry[0]);
 
   const lowList = low.join(", ");
   const highList = high.join(", ");

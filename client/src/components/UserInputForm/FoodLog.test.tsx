@@ -33,7 +33,7 @@ describe("Food Log", () => {
       "Food log cannot be empty. Please enter e.g. banana",
     );
   });
-    it("The label is visible for user", () => {
+  it("The label is visible for user", () => {
     const onChange = vi.fn();
 
     render(<FoodLog value="" error={null} onChange={onChange} />);

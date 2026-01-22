@@ -16,12 +16,9 @@ describe("Warning Alert", () => {
     expect(screen.getByTestId("warning")).toHaveAttribute("data-open", "true");
   });
 
-  it("When there is np error, then warning alert is not visible", async() => {
-    render(
-      <WarningAlert value="" />,
-    );
+  it("When there is np error, then warning alert is not visible", async () => {
+    render(<WarningAlert value="" />);
 
     expect(screen.getByTestId("warning")).toHaveAttribute("data-open", "false");
-
   });
 });

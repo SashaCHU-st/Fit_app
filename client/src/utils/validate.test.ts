@@ -1,5 +1,9 @@
 import { describe, expect, it } from "vitest";
-import { validateAmountFoodLogInput, validateFoodLogInput, validateMealType } from "./validate";
+import {
+  validateAmountFoodLogInput,
+  validateFoodLogInput,
+  validateMealType,
+} from "./validate";
 
 describe("Validate Food Amount Log", () => {
   it("returns error if empty", () => {
@@ -41,9 +45,6 @@ describe("Validate Food log", () => {
 
 describe("Validate Meal dropdown", () => {
   it("returns error if empty", () => {
-    expect(validateMealType("")).toMatch(
-      "Please select a meal type",
-    );
+    expect(validateMealType("")).toMatch("Please select a meal type");
   });
-
 });

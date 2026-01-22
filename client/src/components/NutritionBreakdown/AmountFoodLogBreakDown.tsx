@@ -13,7 +13,7 @@ const AmountFoodLogBreakDown = ({ value }: AmountFoodProps) => {
         component="dd"
         data-raw-value={Math.round(value * 100)}
       >
-        {Number(value * 100).toFixed(0)} gr
+        {Number(value).toFixed(0)} gr
       </Text>
     </Row>
   );

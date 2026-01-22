@@ -11,7 +11,7 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "type-check": "tsc --noEmit",
+    "type-check": "tsc -b --noEmit",
     "format": "npx prettier . --write",
     "format:check": "npx prettier . --check",
     "test": "vitest",

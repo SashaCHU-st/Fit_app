@@ -44,11 +44,15 @@ const ParticleBackground = () => {
       thickness: 0.15,
       ior: 1.25,
       clearcoat: 1.0,
-      clearcoatRoughness: 0.05
+      clearcoatRoughness: 0.05,
     });
 
     const count = 200;
-    const bubbles = new THREE.InstancedMesh(bubbleGeometry, bubbleMaterial, count);
+    const bubbles = new THREE.InstancedMesh(
+      bubbleGeometry,
+      bubbleMaterial,
+      count,
+    );
     const dummy = new THREE.Object3D();
 
     for (let i = 0; i < count; i += 1) {
@@ -56,7 +60,7 @@ const ParticleBackground = () => {
       dummy.position.set(
         (Math.random() - 0.5) * 240,
         (Math.random() - 0.5) * 240,
-        (Math.random() - 0.5) * 240
+        (Math.random() - 0.5) * 240,
       );
       dummy.scale.set(scale, scale, scale);
       dummy.updateMatrix();
@@ -73,18 +77,23 @@ const ParticleBackground = () => {
       60,
       viewport.width / viewport.height,
       1,
-      1000
+      1000,
     );
     camera.position.z = 180;
     scene.add(camera);
 
-    const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
+    const renderer = new THREE.WebGLRenderer({
+      canvas,
+      alpha: true,
+      antialias: true,
+    });
     renderer.setSize(viewport.width, viewport.height);
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
     renderer.setClearColor(0x000000, 0);
     if ("physicallyCorrectLights" in renderer) {
-      (renderer as THREE.WebGLRenderer & { physicallyCorrectLights: boolean })
-        .physicallyCorrectLights = true;
+      (
+        renderer as THREE.WebGLRenderer & { physicallyCorrectLights: boolean }
+      ).physicallyCorrectLights = true;
     }
 
     const controls = new OrbitControls(camera, canvas);
@@ -114,7 +123,7 @@ const ParticleBackground = () => {
 
     return () => {
       // window.removeEventListener("resize", handleResize);
-      // window.cancelAnimationFrame(frameId);
+      window.cancelAnimationFrame(frameId);
 
       controls.dispose();
       bubbleGeometry.dispose();
