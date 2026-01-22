@@ -36,7 +36,8 @@ describe("calculateNutrition", () => {
       carbohydrates: 60,
       proteins: 20,
       fat: 10,
-      amountFoodLogBreakDown: 2,
+      foodLogInput: "banana",
+      amountFoodLogBreakDown: 200,
       mealType: "breakfast",
     });
   });

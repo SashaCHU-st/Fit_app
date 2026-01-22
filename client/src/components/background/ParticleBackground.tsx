@@ -90,19 +90,19 @@ const ParticleBackground = () => {
     const controls = new OrbitControls(camera, canvas);
     controls.enableDamping = true;
 
-    const handleResize = () => {
-      viewport.width = window.innerWidth;
-      viewport.height = window.innerHeight;
+    // const handleResize = () => {
+    //   viewport.width = window.innerWidth;
+    //   viewport.height = window.innerHeight;
 
-      camera.aspect = viewport.width / viewport.height;
-      camera.updateProjectionMatrix();
+    //   camera.aspect = viewport.width / viewport.height;
+    //   camera.updateProjectionMatrix();
 
-      renderer.setSize(viewport.width, viewport.height);
-      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-      renderer.render(scene, camera);
-    };
+    //   renderer.setSize(viewport.width, viewport.height);
+    //   renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    //   renderer.render(scene, camera);
+    // };
 
-    window.addEventListener("resize", handleResize);
+    // window.addEventListener("resize", handleResize);
 
     let frameId = 0;
     const animate = () => {
@@ -113,8 +113,8 @@ const ParticleBackground = () => {
     frameId = window.requestAnimationFrame(animate);
 
     return () => {
-      window.removeEventListener("resize", handleResize);
-      window.cancelAnimationFrame(frameId);
+      // window.removeEventListener("resize", handleResize);
+      // window.cancelAnimationFrame(frameId);
 
       controls.dispose();
       bubbleGeometry.dispose();
