@@ -3,7 +3,7 @@ interface TextProps {
   children: React.ReactNode;
   "data-raw-value"?: number;
   "data-test-id"?: string;
-  component: "dt" | "dd";
+  component?: "dt" | "dd";
 }
 
 export const Text = ({

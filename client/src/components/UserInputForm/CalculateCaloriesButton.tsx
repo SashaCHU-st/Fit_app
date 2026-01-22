@@ -16,7 +16,7 @@ const CalculateNutritionButton = ({
       variant="contained"
       startIcon={loading ? <Spinner /> : null}
     >
-      {loading ? "Calculating" : "Calculate Food Nutrition"}
+      {loading ? "Checking" : "Check Food Nutrition"}
     </Button>
   );
 };

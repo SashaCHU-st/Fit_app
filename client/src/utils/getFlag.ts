@@ -1,4 +1,4 @@
-import { MEAL_RECOMMENDATIONS } from "./recommendations";
+import { MEAL_RECOMMENDATIONS } from "../types/recommendations";
 export type Flag = "low" | "good" | "high" | null;
 
 export const getFlag = (

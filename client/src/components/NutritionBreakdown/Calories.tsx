@@ -9,7 +9,11 @@ const Calories = ({ value, mealType }: BreakdownProps) => {
   return (
     <Row data-flag={flag}>
       <Text component="dt">Calories</Text>
-      <Text data-test-id="Calories" component="dd">
+      <Text
+        data-test-id="Calories"
+        component="dd"
+        data-raw-value={Math.round(value)}
+      >
         {value.toFixed(2)} kcal
       </Text>
     </Row>

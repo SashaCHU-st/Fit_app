@@ -2,8 +2,6 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "../pages/Home";
 import CaloriesCalculator from "../pages/CaloriesCalculator";
 
-
-
 const AppRouter = () => {
   return (
     <BrowserRouter>

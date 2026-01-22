@@ -25,14 +25,6 @@ export const ButtonRoot = styled.button`
   color: #ffffff;
   border: none;
 
-  &[data-variant="outlined"] {
-    background-color: ${colors.primary1};
-    color: ${colors.primary2};
-    // border: 1px solid ${colors.primary};
-    &:hover {
-      background-color: ${colors.hover1};
-    }
-  }
 
   &:disabled {
     opacity: 0.6;

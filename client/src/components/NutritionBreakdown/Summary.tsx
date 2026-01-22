@@ -1,14 +1,7 @@
 import { TitleH2 } from "../ui/Title/styles";
-import { getFlag } from "../../utils/getFlag";
-import { TitleH3 } from "../ui/Title/styles";
-
-interface SummaryProps {
-  calories: number;
-  proteins: number;
-  carbohydrates: number;
-  fat: number;
-  mealType: string;
-}
+import { Text } from "../ui/Text/Text";
+import { summaryFlags } from "../../utils/summaryFlags";
+import type { SummaryProps } from "../../types/breakdown";
 
 const Summary = ({
   mealType,
@@ -17,39 +10,29 @@ const Summary = ({
   carbohydrates,
   fat,
 }: SummaryProps) => {
-  const flags = {
-    calories: getFlag(calories, mealType, "calories"),
-    protein: getFlag(proteins, mealType, "protein"),
-    fat: getFlag(fat, mealType, "fat"),
-    carbs: getFlag(carbohydrates, mealType, "carbs"),
-  };
-  const low = Object.entries(flags)
-    .filter(([_, f]) => f === "low")
-    .map(([k]) => k);
-
-  const high = Object.entries(flags)
-    .filter(([_, f]) => f === "high")
-    .map(([k]) => k);
-
-  const lowList = low.join(", ");
-  const highList = high.join(", ");
+  const { low, lowList, high, highList } = summaryFlags({
+    mealType,
+    calories,
+    proteins,
+    carbohydrates,
+    fat,
+  });
 
   return (
     <summary>
       <TitleH2>For {mealType}:</TitleH2>
-      <TitleH3>
-        {low.length > 0 && (
-          <>
-            You are low on <strong>{lowList} </strong>I would suggest to add more
-          </>
-        )}
-        {high.length > 0 && (
-          <>
-            <br />
-            It would be better to reduce <strong>{highList}</strong>, maybe try to change amount
-          </>
-        )}
-      </TitleH3>
+      {low.length > 0 && (
+        <Text>
+          You are low on <strong>{lowList} </strong>I would suggest to add more;
+        </Text>
+      )}
+      {high.length > 0 && (
+        <Text>
+          <br />
+          It would be better to reduce <strong>{highList}</strong>, maybe try to
+          change amount;
+        </Text>
+      )}
     </summary>
   );
 };

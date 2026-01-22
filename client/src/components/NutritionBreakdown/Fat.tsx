@@ -8,7 +8,11 @@ const Fat = ({ value, mealType }: BreakdownProps) => {
   return (
     <Row data-flag={flag}>
       <Text component="dt">Fat</Text>
-      <Text data-test-id="fat" component="dd">
+      <Text
+        data-test-id="fat"
+        component="dd"
+        data-raw-value={Math.round(value * 100)}
+      >
         {value.toFixed(2)} gr
       </Text>
     </Row>

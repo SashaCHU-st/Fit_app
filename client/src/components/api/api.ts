@@ -7,7 +7,6 @@ interface Nutriments {
 
 interface FoodProduct {
   product_name: string;
-  brands?: string;
   nutriments: Nutriments;
 }
 
@@ -33,20 +32,19 @@ const fetchWithTimeout = async (
   }
 };
 
-/** Checks whether the venue slug exists and throws an error if it does not.
- * Checking coordinates of the venue
- */
 export const FoodData = async (foodLog: string): Promise<FoodApiResponse> => {
   const response = await fetchWithTimeout(
     `https://world.openfoodfacts.org/cgi/search.pl?search_terms=${foodLog}&search_simple=1&action=process&json=1&page_size=1`,
-    9000,
+    20000,
   );
   const data = await response.json();
-  if (data.count === 0) {
-    throw new Error(`Food with such as name ${foodLog} not exist`);
-  }
-  if (!response.ok) {
-        throw new Error(`Something went wrong`);
-  }
+console.log(data);
+
+if (data.count === 0) {
+  throw new Error(`Food with such as name ${foodLog} not exist`);
+}
+if (!response.ok) {
+  throw new Error(`Something went wrong`);
+}
   return data as FoodApiResponse;
 };

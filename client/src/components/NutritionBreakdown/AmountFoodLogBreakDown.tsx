@@ -1,15 +1,19 @@
 import { Text } from "../ui/Text/Text";
 import { Row } from "../ui/primitives/Row";
-import type { BreakdownProps } from "../../types/breakdown";
-import { getFlag } from "../../utils/getFlag";
+interface AmountFoodProps {
+  value: number;
+}
 
-const AmountFoodLogBreakDown = ({ value, mealType }: BreakdownProps) => {
-  const flag = getFlag(value, mealType, "calories");
+const AmountFoodLogBreakDown = ({ value }: AmountFoodProps) => {
   return (
-    <Row data-flag={flag}>
-      <Text component="dt">Food amount</Text>
-      <Text data-test-id="amountFoodLogBreakdown" component="dd">
-        {Number(value*100).toFixed(0)} gr
+    <Row>
+      <Text component="dt">Food amount (in grams)</Text>
+      <Text
+        data-test-id="amountFoodLogBreakdown"
+        component="dd"
+        data-raw-value={Math.round(value * 100)}
+      >
+        {Number(value * 100).toFixed(0)} gr
       </Text>
     </Row>
   );

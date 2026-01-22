@@ -1,20 +1,8 @@
 import { Select } from "../ui/Select/Select";
+import type { InputProps } from "../../types/form";
+import { options } from "../../types/dropDownOptions";
 
-const options = [
-  { label: "Choose meal", value: "none" },
-  { label: "Breakfast", value: "breakfast" },
-  { label: "Lunch", value: "lunch" },
-  { label: "Dinner", value: "dinner" },
-  { label: "Snack", value: "snack" },
-];
-
-interface MealTypeProps {
-  value: string;
-  error?: string | null;
-  onChange: (value: string, error: string | null) => void;
-}
-
-const MealTypeSelect = ({ value, error, onChange }: MealTypeProps) => {
+const MealTypeSelect = ({ value, error, onChange }: InputProps) => {
   const handleChangeMealType = (value: string) => {
     onChange(value, null);
   };

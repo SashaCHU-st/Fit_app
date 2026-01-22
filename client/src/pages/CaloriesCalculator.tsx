@@ -4,16 +4,7 @@ import UserInputForm from "../components/UserInputForm/UserInputForm";
 import { useState } from "react";
 import { BreakdownWrapper } from "../components/ui/primitives/BreakdownWrapper";
 import NutritionBreakdown from "../components/NutritionBreakdown/NutritionBreakdown";
-
-export interface NutritionBreakdownData {
-  mealType: string;
-  update?: boolean;
-  calories: number;
-  proteins: number;
-  carbohydrates: number;
-  fat: number;
-  amountFoodLogBreakDown: number;
-}
+import type { NutritionBreakdownData } from "../types/form";
 
 const CaloriesCalculator = () => {
   const [formData, setFormData] = useState<NutritionBreakdownData | null>(null);
@@ -38,6 +29,7 @@ const CaloriesCalculator = () => {
           <BreakdownWrapper data-open={Boolean(formData)}>
             {formData && (
               <NutritionBreakdown
+                foodLogInput={formData.foodLogInput}
                 mealType={formData.mealType}
                 update={update}
                 calories={formData.calories}

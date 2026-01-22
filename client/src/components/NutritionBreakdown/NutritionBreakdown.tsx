@@ -7,18 +7,12 @@ import Proteins from "./Proteins";
 import Carbohydrates from "./Carbohydrates";
 import Summary from "./Summary";
 import UpdateAlert from "./UpdateAlert";
+import LegendItems from "./Legend";
+import type { NutritionBreakdownData } from "../../types/form";
 
 const DetailsList = styled.dl``;
-export interface NutritionBreakdownData {
-  mealType: string;
-  update?: boolean;
-  calories: number;
-  proteins: number;
-  carbohydrates: number;
-  fat: number;
-  amountFoodLogBreakDown: number;
-}
 const NutritionBreakdown = ({
+  foodLogInput,
   mealType,
   update,
   calories,
@@ -29,13 +23,13 @@ const NutritionBreakdown = ({
 }: NutritionBreakdownData) => {
   return (
     <section>
-      <TitleH2>Here is your nutrition breakdown for {mealType}</TitleH2>
+      <TitleH2>
+        Here’s your nutrition breakdown for {mealType} with a {foodLogInput}.
+      </TitleH2>
+      <LegendItems />
       <UpdateAlert update={update} />
       <DetailsList>
-        <AmountFoodLogBreakDown
-          value={amountFoodLogBreakDown}
-          mealType={mealType}
-        />
+        <AmountFoodLogBreakDown value={amountFoodLogBreakDown} />
         <Calories value={calories} mealType={mealType} />
         <Proteins value={proteins} mealType={mealType} />
         <Fat value={fat} mealType={mealType} />
