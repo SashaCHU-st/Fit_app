@@ -7,6 +7,7 @@ import MealTypeSelect from "./MealTypeSelect";
 import WarningAlert from "./WarningAlert";
 import type { UserInput } from "../../types/form";
 import { useUserInputForm } from "./model/useUserInputForm";
+import RandomizeFoodLog from "./RandomizeFoodLog";
 
 const UserInputForm = (props: UserInput) => {
   const {
@@ -43,7 +44,13 @@ const UserInputForm = (props: UserInput) => {
             handleChange({ amountFoodLogInput: v }, { amountFoodLogError: e });
           }}
         />
+        <RandomizeFoodLog
+          onRandomize={(v) => {
+            handleChange({ foodLogInput: v }, { foodLogError: "" });
+          }}
+        />
         <CalculateCaloriesButton loading={isLoading} />
+
         <WarningAlert value={alert} />
       </form>
     </section>

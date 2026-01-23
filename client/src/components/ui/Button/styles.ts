@@ -25,6 +25,15 @@ export const ButtonRoot = styled.button`
   color: #ffffff;
   border: none;
 
+  &[data-variant="outlined"] {
+    background-color: ${colors.background};
+    color: ${colors.primary};
+    // border: 1px solid ${colors.primary};
+    &:hover {
+      background-color: ${colors.buttonHover};
+    }
+  }
+
   &:disabled {
     opacity: 0.6;
     cursor: not-allowed;
@@ -33,8 +42,8 @@ export const ButtonRoot = styled.button`
   &:hover {
     background-color: ${colors.buttonHover};
   }
-  // &:active {
-  //   box-shadow: none;
-  //   transform: translateY(4px);
-  // }
+  &:active {
+    box-shadow: none;
+    transform: translateY(4px);
+  }
 `;
