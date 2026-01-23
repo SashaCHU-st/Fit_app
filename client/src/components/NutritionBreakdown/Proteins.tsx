@@ -7,11 +7,14 @@ const Proteins = ({ value, mealType }: BreakdownProps) => {
   const flag = getFlag(value, mealType, "protein");
   return (
     <Row data-flag={flag}>
-      <Text component="dt">Proteins</Text>
+      <Text component="dt" variant="small">
+        Proteins
+      </Text>
       <Text
         data-test-id="proteins"
         component="dd"
         data-raw-value={Math.round(value * 100)}
+        variant="small"
       >
         {value.toFixed(2)} gr
       </Text>

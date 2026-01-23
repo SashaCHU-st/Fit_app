@@ -8,8 +8,11 @@ const Calories = ({ value, mealType }: BreakdownProps) => {
 
   return (
     <Row data-flag={flag}>
-      <Text component="dt">Calories</Text>
+      <Text component="dt" variant="small">
+        Calories
+      </Text>
       <Text
+        variant="small"
         data-test-id="Calories"
         component="dd"
         data-raw-value={Math.round(value)}

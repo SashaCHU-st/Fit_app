@@ -7,11 +7,14 @@ interface AmountFoodProps {
 const AmountFoodLogBreakDown = ({ value }: AmountFoodProps) => {
   return (
     <Row>
-      <Text component="dt">Food amount (in grams)</Text>
+      <Text component="dt" variant="small">
+        Food amount (in grams)
+      </Text>
       <Text
         data-test-id="amountFoodLogBreakdown"
         component="dd"
         data-raw-value={Math.round(value * 100)}
+        variant="small"
       >
         {Number(value).toFixed(0)} gr
       </Text>

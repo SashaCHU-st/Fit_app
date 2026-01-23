@@ -1,15 +1,11 @@
 import Button from "../ui/Button/Button";
 import { randomFoodLog } from "../../types/randomFoodLog";
-
+import { getRandomItem } from "../../utils/getRandomItem";
 interface RandomizeFoodLogProps {
   onRandomize: (v: string) => void;
 }
 
 const RandomizeFoodLog = ({ onRandomize }: RandomizeFoodLogProps) => {
-  function getRandomItem(arr: any) {
-    const randomIndex = Math.floor(Math.random() * arr.length);
-    return arr[randomIndex];
-  }
   const handleRandomize = () => {
     onRandomize(getRandomItem(randomFoodLog));
   };
@@ -18,7 +14,7 @@ const RandomizeFoodLog = ({ onRandomize }: RandomizeFoodLogProps) => {
     <Button
       type="button"
       onClick={handleRandomize}
-      data-test-id="calculateFoodNutrition"
+      data-test-id="randomFood"
       variant="outlined"
     >
       Random Food :)

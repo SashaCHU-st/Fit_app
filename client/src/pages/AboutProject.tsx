@@ -4,12 +4,17 @@ import { TitleH1 } from "../components/ui/Title/styles";
 import { Text } from "../components/ui/Text/Text";
 
 const FrameWrapper = styled.div`
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 16px;
+  width: 100%;
+  max-width: 720px;
+  box-sizing: border-box;
+  padding: 0 16px;
+  text-align: center;
+  min-height: calc(100vh - 120px);
 `;
 const AboutProject = () => {
   return (

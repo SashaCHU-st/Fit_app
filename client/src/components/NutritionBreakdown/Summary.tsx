@@ -22,12 +22,12 @@ const Summary = ({
     <summary>
       <TitleH2>For {mealType}:</TitleH2>
       {low.length > 0 && (
-        <Text>
+        <Text variant="small">
           You are low on <strong>{lowList} </strong>I would suggest to add more;
         </Text>
       )}
       {high.length > 0 && (
-        <Text>
+        <Text variant="small">
           <br />
           It would be better to reduce <strong>{highList}</strong>, maybe try to
           change amount;
