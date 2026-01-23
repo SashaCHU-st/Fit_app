@@ -21,7 +21,7 @@ const RandomizeFoodLog = ({ onRandomize }: RandomizeFoodLogProps) => {
       data-test-id="calculateFoodNutrition"
       variant="outlined"
     >
-      Random Food
+      Random Food :)
     </Button>
   );
 };
