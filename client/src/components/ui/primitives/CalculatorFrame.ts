@@ -13,7 +13,7 @@ export const Frame = styled.div`
 export const Calculator = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 24px; /* gap: 3 в MUI → 3 * 8px */
+  gap: 24px;
   padding: 24px;
   box-sizing: border-box;
 `;
