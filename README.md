@@ -1,4 +1,4 @@
-# Fit app
+# Fit App
 Simple nutrition calculator web app that uses the [***Open Food Facts API***](https://world.openfoodfacts.org/data) to help
 users estimate calories and macros for meals. Built for learning ***React,
 TypeScript, Linaria styling***, component structure, and API integration. Includes
@@ -6,7 +6,8 @@ an interactive ***Three.js*** background and a roadmap for an exercise page. Cov
 with unit/component tests ***Vitest*** and ***end-to-end tests
 Playwright***.
 
-
+## Live Demo 
+[Fit App](fit-app-self.vercel.app) 
 
 ## How to run:
 The project requires **Node.js >= 20**.
