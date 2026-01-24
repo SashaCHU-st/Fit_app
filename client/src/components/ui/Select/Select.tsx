@@ -15,6 +15,7 @@ interface SelectProps {
   "data-test-id": string;
 }
 
+/**Select from meal types */
 export const Select = ({
   id,
   label,

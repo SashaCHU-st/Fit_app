@@ -9,7 +9,7 @@ interface ButtonProps {
   children: ReactNode;
   variant: "contained" | "outlined";
 }
-
+/**Button used for Random food and Check Food Nutrition */
 const Button = ({
   "data-test-id": testId,
   onClick,

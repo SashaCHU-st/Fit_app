@@ -2,6 +2,8 @@ import MainPageLayout from "../components/layout/MainLayout";
 import { TitleH1 } from "../components/ui/Title/styles";
 import { Text } from "../components/ui/Text/Text";
 import { FrameWrapper } from "../components/ui/primitives/MainLayout";
+
+/** page about the project, what was purpose of this page */
 const AboutProject = () => {
   return (
     <section>

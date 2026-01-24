@@ -3,6 +3,7 @@ import { TitleH1 } from "../components/ui/Title/styles";
 import { Text } from "../components/ui/Text/Text";
 import { FrameWrapper } from "../components/ui/primitives/MainLayout";
 
+/** some short intro about app */
 const Home = () => {
   return (
     <main>

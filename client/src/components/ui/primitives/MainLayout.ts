@@ -6,9 +6,9 @@ export const PageWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: flex-start; //starts from top (for Calculator needed)
   position: relative;
-  overflow: hidden;
+  overflow: hidden; //prevents scrollbars
   background: ${colors.background};
 `;
 
@@ -17,8 +17,8 @@ export const NavZone = styled.div`
   margin-top: 18px;
   display: flex;
   justify-content: center;
-  z-index: 2;
-  pointer-events: auto;
+  z-index: 2; // renders above elements
+  pointer-events: auto; //clickable
 `;
 
 export const CenterContainer = styled.div`
@@ -27,7 +27,7 @@ export const CenterContainer = styled.div`
   display: flex;
   justify-content: center;
   position: relative;
-  z-index: 1;
+  z-index: 1; // a bit "bellow" NavZone
   margin-top: 24px;
 `;
 
@@ -41,7 +41,8 @@ export const FrameWrapper = styled.div`
   box-sizing: border-box;
   text-align: center;
   padding: 0 16px;
-  // needed to make page height to centralize it with justify-content:center
-  min-height: calc(100vh - 120px);
+  min-height: calc(
+    100vh - 120px
+  ); // needed to make page height to centralize it with justify-content:center
   justify-content: center;
 `;

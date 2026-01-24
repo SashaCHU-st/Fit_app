@@ -18,17 +18,25 @@ const fetchWithTimeout = async (
   url: string,
   timeoutMs: number,
 ): Promise<Response> => {
-  let timeoutId: ReturnType<typeof setTimeout> | undefined;
-  const timeoutPromise = new Promise<never>((_, reject) => {
-    timeoutId = setTimeout(() => {
-      reject(new Error("Request timeout"));
-    }, timeoutMs);
-  });
+  //Abort Controller: allows to abort  Web requests
+  const controller = new AbortController();
+
+  //setTimeout(func, delay)
+  const timeoutId = setTimeout(() => {
+    //cancel operation
+    controller.abort();
+  }, timeoutMs);
 
   try {
-    return (await Promise.race([fetch(url), timeoutPromise])) as Response;
+    // fetch(resource, options => signal:conroller.signal)
+    return await fetch(url, {
+      signal: controller.signal,
+      //if controller.about() then fetch catch that and goes to catch
+    });
+  } catch {
+    throw new Error("Request timeout");
   } finally {
-    if (timeoutId) clearTimeout(timeoutId);
+    clearTimeout(timeoutId);
   }
 };
 

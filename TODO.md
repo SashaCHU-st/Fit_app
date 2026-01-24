@@ -1,0 +1,1 @@
+- Create page for exercises with pictures or list?

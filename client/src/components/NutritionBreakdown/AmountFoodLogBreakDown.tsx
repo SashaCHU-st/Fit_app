@@ -3,6 +3,7 @@ import { Row } from "../ui/primitives/Row";
 interface AmountFoodProps {
   value: number;
 }
+/** renders the value provided by the parent component, which comes from user input */
 
 const AmountFoodLogBreakDown = ({ value }: AmountFoodProps) => {
   return (

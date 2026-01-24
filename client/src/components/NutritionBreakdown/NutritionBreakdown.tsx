@@ -10,6 +10,10 @@ import UpdateAlert from "./UpdateAlert";
 import LegendItems from "../ui/NutritionLegend/NutritionLegend";
 import type { NutritionBreakdownData } from "../../types/form";
 
+/**Parent component that renders the full nutrition breakdown.
+ * passes values to children components
+ */
+
 const DetailsList = styled.dl``;
 const NutritionBreakdown = ({
   foodLogInput,

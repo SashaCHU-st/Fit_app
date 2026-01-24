@@ -1,3 +1,5 @@
+/** validates Food amount, Food Log, and meal type */
+
 export const validateAmountFoodLogInput = (raw: string): string | null => {
   if (raw === "")
     return "Food amount cannot be empty. Please start to type e.g 10";

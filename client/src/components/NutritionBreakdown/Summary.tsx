@@ -3,6 +3,10 @@ import { Text } from "../ui/Text/Text";
 import { summaryFlags } from "../../utils/summaryFlags";
 import type { SummaryProps } from "../../types/breakdown";
 
+/**Displays a summary based on values provided by other components
+ * and highlights low and high values for the user.
+ */
+
 const Summary = ({
   mealType,
   calories,

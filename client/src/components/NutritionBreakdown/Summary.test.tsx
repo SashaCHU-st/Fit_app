@@ -39,7 +39,9 @@ describe("Summary", () => {
     render(<Summary {...validForm} />);
 
     expect(screen.getByText(/For breakfast:/i)).toBeInTheDocument();
-    expect(screen.getByText(/You have a great choice for today/i)).toBeInTheDocument();
+    expect(
+      screen.getByText(/You have a great choice for today/i),
+    ).toBeInTheDocument();
   });
 
   it("when summary flag returns low, then appear message about that some element in low", () => {

@@ -6,6 +6,11 @@ import { BreakdownWrapper } from "../components/ui/primitives/BreakdownWrapper";
 import NutritionBreakdown from "../components/NutritionBreakdown/NutritionBreakdown";
 import type { NutritionBreakdownData } from "../types/form";
 
+/**
+ * Nutrition Calculator (parent component) that renders a form for user input
+ * and shows the nutrition breakdown after successful validation.
+ */
+
 const NutritionCalculator = () => {
   const [formData, setFormData] = useState<NutritionBreakdownData | null>(null);
   const [update, setUpdate] = useState<boolean>(false);

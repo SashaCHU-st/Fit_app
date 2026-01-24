@@ -6,6 +6,9 @@ interface AlertProps {
   role: "info" | "warning";
   "data-open"?: boolean;
 }
+/**Styled alert used as a warning (no such food)
+ * or as an info message when the user updates form values after submitting.
+ */
 
 const Alert = ({
   children,

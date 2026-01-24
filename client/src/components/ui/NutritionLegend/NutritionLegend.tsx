@@ -5,6 +5,10 @@ import {
   LegendHigh,
   LegendLow,
 } from "./styles";
+/**
+ * Legend that identifies color meanings for the user,
+ * indicating when nutrition values are low(blue), high(read), or good(green).
+ */
 
 const NutritionLegend = () => {
   return (

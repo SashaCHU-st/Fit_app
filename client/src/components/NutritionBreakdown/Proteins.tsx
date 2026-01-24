@@ -3,6 +3,12 @@ import { Row } from "../ui/primitives/Row";
 import { getFlag } from "../../utils/getFlag";
 import type { BreakdownProps } from "../../types/breakdown";
 
+/**
+ * Renders the value provided by the parent component
+ * the amount calculated based on the user's food input
+ * and values received from the API based on the food log.
+ */
+
 const Proteins = ({ value, mealType }: BreakdownProps) => {
   const flag = getFlag(value, mealType, "protein");
   return (

@@ -10,7 +10,7 @@ import TopNav from "./TopNav";
 interface MainPageProps {
   children?: ReactNode;
 }
-
+/** Main Layout items  centered */
 const MainPageLayout = ({ children }: MainPageProps) => {
   return (
     <PageWrapper>

@@ -13,6 +13,7 @@ export const colors = {
   muted: "#6b6b6b",
   border: "#c4c4c4",
   background: "#d3edf9",
+  backgroundCalculator: "#ffffff",
   backgroundButtonNavbar: "#85cbe9",
   backgroundNavbar: "#ffffffbb",
   hover: "#6cc5eb",

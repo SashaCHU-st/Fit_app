@@ -1,3 +1,4 @@
+/** random food */
 export const randomFoodLog: string[] = [
   "apple",
   "banana",

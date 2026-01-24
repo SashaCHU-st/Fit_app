@@ -1,9 +1,13 @@
 import { useState } from "react";
-import { initialForm, initialEmptyErrors } from "./initialState";
+import { initialForm, initialEmptyErrors } from "../model/initialState";
 import type { UserForm, UserFormError, UserInput } from "../../../types/form";
 import { checkErrors } from "../../../utils/checkErrors";
 import { isFormValid } from "../../../utils/isFormValid";
 import { calculateNutrition } from "../../../utils/calculateNutrition";
+/**Custom hook that manages user input form state.
+ * Handles form validation, submission, loading state,
+ * update alerts when the form changes, and error handling.
+ */
 
 export const useUserInputForm = ({
   onSubmit,

@@ -1,6 +1,10 @@
 import { FoodData } from "../components/api/api";
 import type { UserForm } from "../types/form";
 
+/** Fetches nutrition data from the API and calculates
+ * final nutrition values based on the user-input food amount.
+ */
+
 export const calculateNutrition = async ({
   foodLogInput,
   amountFoodLogInput,

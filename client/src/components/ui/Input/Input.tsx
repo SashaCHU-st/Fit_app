@@ -12,7 +12,7 @@ interface InputProps {
   "data-test-id": string;
   step?: number;
 }
-
+/**Input for Food Log and Food Amount */
 export const Input = ({
   id,
   label,

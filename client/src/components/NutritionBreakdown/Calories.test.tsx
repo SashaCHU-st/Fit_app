@@ -13,7 +13,7 @@ const mockGetFlag = vi.mocked(getFlag);
 describe("Calories", () => {
   it("checking the correct data-test-id", () => {
     render(<Calories value={222} mealType="breakfast" />);
-    
+
     expect(screen.getByTestId("calories")).toBeInTheDocument();
   });
   it("renders calories amount", () => {

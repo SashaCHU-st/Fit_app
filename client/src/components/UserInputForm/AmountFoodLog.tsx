@@ -2,6 +2,10 @@ import { Input } from "../ui/Input/Input";
 import type { InputProps } from "../../types/form";
 import { validateAmountFoodLogInput } from "../../utils/validate";
 
+/**Renders a user input field for food amount in grams
+ * and validates the value on change.
+ */
+
 const AmountFoodLog = ({ value, error, onChange }: InputProps) => {
   const handleChangeFoodAmount = (value: string) => {
     const validationError = validateAmountFoodLogInput(value);

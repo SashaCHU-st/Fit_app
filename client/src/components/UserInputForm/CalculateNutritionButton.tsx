@@ -4,6 +4,8 @@ import { Spinner } from "../ui/primitives/Spinner";
 type CalculateNutritionButtonProps = {
   loading: boolean;
 };
+/**Submit button that sends user input values for nutrition calculation.
+ */
 
 const CalculateNutritionButton = ({
   loading,

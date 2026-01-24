@@ -62,10 +62,25 @@ npm run dev
 The application will be available at:
 http://localhost:5173
 #### 2.In another terminal, run the end-to-end tests:
-```
+```bash
 npm run e2e
 ```
 <img width="1134" height="283" alt="image" src="https://github.com/user-attachments/assets/0384f71f-3078-4ded-980f-c5251e116334" />
+
+> Sometimes end-to-end tests take longer.
+
+### Run end-to-end tests (Playwright) AND unit and component tests
+#### 1. Start the development server in one terminal:
+
+```bash
+npm run dev
+```
+The application will be available at:
+http://localhost:5173
+#### 2.In another terminal, run command:
+```bash
+npm run test:all
+```
 
 > Sometimes end-to-end tests take longer.
 

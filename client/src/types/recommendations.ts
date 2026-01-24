@@ -1,3 +1,7 @@
+/**
+ * Defines recommended ranges for calories and macronutrients for each meal type (statistic)
+ */
+
 export interface RangeRule {
   min: number;
   max: number;

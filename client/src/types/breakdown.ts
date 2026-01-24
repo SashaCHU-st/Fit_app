@@ -12,4 +12,3 @@ export interface SummaryProps {
   carbohydrates: number;
   mealType: string;
 }
-

@@ -3,6 +3,7 @@ import { styled } from "@linaria/react";
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 
+/** Just simple background with three.js */
 const CanvasHost = styled.div`
   position: fixed;
   inset: 0;

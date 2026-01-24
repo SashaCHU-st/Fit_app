@@ -2,6 +2,7 @@ import { NavLinks, NavShell } from "../ui/NavBar/TopNav";
 import { navItemActiveClass, navItemClass } from "../ui/NavBar/styles";
 import { NavLink } from "react-router-dom";
 
+/**NavBar for page Home/Nutrition Calculator/About */
 const getNavItemClass = ({ isActive }: { isActive: boolean }) =>
   isActive ? `${navItemClass} ${navItemActiveClass}` : navItemClass;
 

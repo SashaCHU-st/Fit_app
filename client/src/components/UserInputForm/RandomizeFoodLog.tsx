@@ -4,7 +4,7 @@ import { getRandomItem } from "../../utils/getRandomItem";
 interface RandomizeFoodLogProps {
   onRandomize: (v: string) => void;
 }
-
+/** Button that selects a random food item() */
 const RandomizeFoodLog = ({ onRandomize }: RandomizeFoodLogProps) => {
   const handleRandomize = () => {
     onRandomize(getRandomItem(randomFoodLog));

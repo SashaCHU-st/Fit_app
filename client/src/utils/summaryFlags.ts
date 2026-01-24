@@ -1,5 +1,7 @@
 import { getFlag } from "./getFlag";
 import type { SummaryProps } from "../types/breakdown";
+
+/**for summary checking flags to give explicit message to user what is in low or high */
 export const summaryFlags = ({
   calories,
   proteins,

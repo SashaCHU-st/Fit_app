@@ -1,6 +1,7 @@
 import { MEAL_RECOMMENDATIONS } from "../types/recommendations";
 export type Flag = "low" | "good" | "high" | null;
 
+/**get Flag for specific micronutriemnets and returns it (needed to display colors for user what is low or high) */
 export const getFlag = (
   value: number,
   mealType?: keyof typeof MEAL_RECOMMENDATIONS,

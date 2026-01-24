@@ -1,8 +1,7 @@
 import { styled } from "@linaria/react";
 
 export const TextDetails = styled.span`
-  // text will not be more then width of container 100%
-  display: block;
+  display: block; // text will not be more then width of container 100%
   max-width: 100%;
   font-family: "Inter", system-ui, sans-serif;
   font-weight: 600;

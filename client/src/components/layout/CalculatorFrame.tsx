@@ -4,6 +4,8 @@ import type { ReactNode } from "react";
 interface CalculatorFrameProps {
   children?: ReactNode;
 }
+/** The frame of the calculator simulation of deep,
+ * a bit elevated from the background*/
 
 const CalculatorFrame = ({ children }: CalculatorFrameProps) => {
   return (

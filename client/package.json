@@ -15,8 +15,10 @@
     "format": "npx prettier . --write",
     "format:check": "npx prettier . --check",
     "test": "vitest",
+    "test:ui": "vitest --ui",
     "test:run": "vitest run",
-    "e2e": "playwright test"
+    "e2e": "playwright test",
+    "test:all": "vitest run && playwright test"
   },
   "dependencies": {
     "@linaria/core": "^6.3.0",
@@ -38,6 +40,7 @@
     "@types/react-dom": "^19.2.3",
     "@types/three": "^0.182.0",
     "@vitejs/plugin-react": "^5.1.1",
+    "@vitest/ui": "^4.0.17",
     "@wyw-in-js/vite": "^1.0.5",
     "eslint": "^9.39.1",
     "eslint-plugin-react-hooks": "^7.0.1",

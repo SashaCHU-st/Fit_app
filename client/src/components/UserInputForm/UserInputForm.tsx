@@ -6,7 +6,7 @@ import MealTypeSelect from "./MealTypeSelect";
 
 import WarningAlert from "./WarningAlert";
 import type { UserInput } from "../../types/form";
-import { useUserInputForm } from "./model/useUserInputForm";
+import { useUserInputForm } from "./hook/useUserInputForm";
 import RandomizeFoodLog from "./RandomizeFoodLog";
 
 const UserInputForm = (props: UserInput) => {

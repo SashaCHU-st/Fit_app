@@ -16,13 +16,3 @@ export const TitleH2 = styled.h2`
   font-size: 1.5rem;
   text-align: center;
 `;
-
-export const TitleH3 = styled.p`
-  font-family: system-ui;
-
-  line-height: 1;
-  margin-top: 0;
-  margin-bottom: 16px;
-  padding: 0;
-  font-size: 1.2rem;
-`;
