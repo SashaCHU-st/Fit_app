@@ -7,7 +7,7 @@ with unit/component tests ***Vitest*** and ***end-to-end tests
 Playwright***.
 
 ## Live Demo 
-[Fit App](fit-app-self.vercel.app) 
+[Fit App](https://fit-app-project.vercel.app/)
 
 ## How to run:
 The project requires **Node.js >= 20**.
