@@ -15,7 +15,7 @@ npm run dev
 ```
 3. Open in browser http://localhost:5173/
 
-# Comands
+# Commands
 ### Checking correct types without build
 ```
 npm run type-check
