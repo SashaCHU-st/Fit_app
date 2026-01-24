@@ -18,7 +18,7 @@ export const TextDetails = styled.span`
   }
 
   &[data-variant="small"] {
-    font-size: 14px;
+    font-size: 18px;
     line-height: 1.6;
   }
   @media (max-width: 768px) {

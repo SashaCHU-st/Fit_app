@@ -1,5 +1,5 @@
 import { NavLinks, NavShell } from "../ui/NavBar/TopNav";
-import { navItemActiveClass, navItemClass } from "../ui/NavBar/navItem";
+import { navItemActiveClass, navItemClass } from "../ui/NavBar/styles";
 import { NavLink } from "react-router-dom";
 
 const getNavItemClass = ({ isActive }: { isActive: boolean }) =>

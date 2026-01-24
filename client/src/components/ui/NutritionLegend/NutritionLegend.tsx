@@ -1,8 +1,8 @@
 import {
   Legend,
+  LegendItem,
   LegendGood,
   LegendHigh,
-  LegendItem,
   LegendLow,
 } from "./styles";
 

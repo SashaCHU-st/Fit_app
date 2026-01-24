@@ -19,23 +19,23 @@ export const LegendItem = styled.li`
   flex: 1;
 `;
 export const LegendLow = styled.span`
-  width: 12px;
-  height: 12px;
-  border-radius: 3px;
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
   border: 1px solid ${colors.border};
   background: ${colors.low};
 `;
 export const LegendGood = styled.span`
-  width: 12px;
-  height: 12px;
-  border-radius: 3px;
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
   border: 1px solid ${colors.border};
   background: ${colors.good};
 `;
 export const LegendHigh = styled.span`
-  width: 12px;
-  height: 12px;
-  border-radius: 3px;
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
   border: 1px solid ${colors.border};
   background: ${colors.high};
 `;
