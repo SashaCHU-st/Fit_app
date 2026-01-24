@@ -1,1 +1,2 @@
 - Create page for exercises with pictures or list?
+- how the colors need to separated? like for main page, calculator, button, input etc?
