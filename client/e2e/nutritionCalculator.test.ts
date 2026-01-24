@@ -60,7 +60,7 @@ test.describe("Nutrition Calculator", () => {
       amountFoodLog.locator('[data-raw-value="10000"]'),
     ).toBeVisible();
     const calories = page.getByText("Calories", { exact: true }).locator("..");
-    await expect(calories.locator('[data-raw-value="100"]')).toBeVisible();
+    await expect(calories.locator('[data-raw-value="10000"]')).toBeVisible();
     const proteins = page.getByText("Proteins", { exact: true }).locator("..");
     await expect(proteins.locator('[data-raw-value="3060"]')).toBeVisible();
     const fat = page.getByText("Fat ", { exact: true }).locator("..");
@@ -131,7 +131,7 @@ test.describe("Nutrition Calculator", () => {
       amountFoodLog.locator('[data-raw-value="10000"]'),
     ).toBeVisible();
     const calories = page.getByText("Calories", { exact: true }).locator("..");
-    await expect(calories.locator('[data-raw-value="100"]')).toBeVisible();
+    await expect(calories.locator('[data-raw-value="10000"]')).toBeVisible();
     const proteins = page.getByText("Proteins", { exact: true }).locator("..");
     await expect(proteins.locator('[data-raw-value="3060"]')).toBeVisible();
     const fat = page.getByText("Fat ", { exact: true }).locator("..");

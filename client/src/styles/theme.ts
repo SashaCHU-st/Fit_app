@@ -12,7 +12,7 @@ export const colors = {
   backgroundButtonNavbar: "#85cbe9",
   backgroundNavbar: "#ffffffbb",
   hover: "#6cc5eb",
-  low: "#fce2e2b9",
+  low: "#d0f7ffb7",
   good: "#e1ffd0b7",
-  high: "#d0f7ffb7",
+  high: "#fce2e2b9",
 };

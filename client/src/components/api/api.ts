@@ -38,7 +38,7 @@ export const FoodData = async (foodLog: string): Promise<FoodApiResponse> => {
     20000,
   );
   const data = await response.json();
-  console.log(data);
+  // console.log(data);
 
   if (data.count === 0) {
     throw new Error(`Food with such as name ${foodLog} not exist`);
