@@ -289,7 +289,7 @@ describe("User Input Form", () => {
     ).toBeVisible();
 
     await userEvent.click(
-      screen.getByRole("button", { name: /Random Food :\)/i }),
+      screen.getByRole("button", { name: /Random Food /i }),
     );
 
     expect(

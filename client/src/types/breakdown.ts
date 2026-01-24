@@ -13,12 +13,3 @@ export interface SummaryProps {
   mealType: string;
 }
 
-export interface NutritionBreakdownData {
-  mealType: string;
-  update?: boolean;
-  calories: number;
-  proteins: number;
-  carbohydrates: number;
-  fat: number;
-  amountFoodLogBreakDown: number;
-}

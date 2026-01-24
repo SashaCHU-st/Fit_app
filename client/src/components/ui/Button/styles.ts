@@ -21,16 +21,16 @@ export const ButtonRoot = styled.button`
   border-radius: 4px;
   cursor: pointer;
 
-  background-color: ${colors.button};
-  color: #ffffff;
+  background-color: ${colors.buttonCalculate};
+  color: ${colors.buttonText};
   border: none;
 
   &[data-variant="outlined"] {
-    background-color: ${colors.background};
-    color: ${colors.primary};
+    background-color: ${colors.buttonRandom};
+    color: ${colors.buttonTextRandom};
     // border: 1px solid ${colors.primary};
     &:hover {
-      background-color: ${colors.buttonHover};
+      background-color: ${colors.buttonHoverRandom};
     }
   }
 

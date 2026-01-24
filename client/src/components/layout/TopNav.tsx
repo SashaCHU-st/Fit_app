@@ -18,7 +18,6 @@ const TopNav = () => {
         <NavLink to="/about" className={getNavItemClass}>
           About the project
         </NavLink>
-        {/* <NavItem to="/nutritionCalculator">Nutrition Calculator</NavItem> */}
         {/* <NavItem to="/exercises">Search Exercises</NavItem> */}
       </NavLinks>
     </NavShell>

@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { render, screen } from "@testing-library/react";
-import CalculateNutritionButton from "./CalculateCaloriesButton";
+import CalculateNutritionButton from "./CalculateNutritionButton";
 
 describe("Calculate Nutrition Food button", () => {
   it("Button should be active from beginning", () => {

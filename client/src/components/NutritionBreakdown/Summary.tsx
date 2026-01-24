@@ -20,6 +20,7 @@ const Summary = ({
 
   return (
     <summary>
+      {}
       <TitleH2>For {mealType}:</TitleH2>
       {low.length > 0 && (
         <Text variant="small">
@@ -33,6 +34,11 @@ const Summary = ({
           It would be better to reduce{" "}
           <strong style={{ color: "red" }}>{highList}</strong>, maybe try to
           change amount;
+        </Text>
+      )}
+      {low.length === 0 && high.length === 0 && (
+        <Text variant="small">
+          <b style={{ color: "green" }}>You have a great choice for today</b>
         </Text>
       )}
     </summary>

@@ -1,7 +1,11 @@
 export const colors = {
   primary: "#000000",
-  button: "#009de0",
+  buttonText: "#ffffff",
+  buttonTextRandom: "#39a4d6",
+  buttonCalculate: "#009de0",
+  buttonRandom: "#d3edf9",
   buttonHover: "#1fa9e4",
+  buttonHoverRandom: "#bfe6f8",
   error: "#d32f2f",
   info: "#eaf9ffff",
   warning: "#ffe3e3ff",

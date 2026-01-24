@@ -7,7 +7,7 @@ import Proteins from "./Proteins";
 import Carbohydrates from "./Carbohydrates";
 import Summary from "./Summary";
 import UpdateAlert from "./UpdateAlert";
-import LegendItems from "./Legend";
+import LegendItems from "../ui/NutritionLegend/NutritionLegend";
 import type { NutritionBreakdownData } from "../../types/form";
 
 const DetailsList = styled.dl``;

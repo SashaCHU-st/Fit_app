@@ -11,7 +11,7 @@ describe("RandomizeFoodLog", () => {
 
     render(<RandomizeFoodLog onRandomize={onRandomize} />);
 
-    await user.click(screen.getByRole("button", { name: /Random Food :\)/i }));
+    await user.click(screen.getByRole("button", { name: /Random Food /i }));
 
     expect(onRandomize).toHaveBeenCalledTimes(1);
     const value = onRandomize.mock.calls[0][0];

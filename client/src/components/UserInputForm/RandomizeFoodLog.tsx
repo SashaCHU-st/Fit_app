@@ -17,7 +17,7 @@ const RandomizeFoodLog = ({ onRandomize }: RandomizeFoodLogProps) => {
       data-test-id="randomFood"
       variant="outlined"
     >
-      Random Food :)
+      Random Food 🎲
     </Button>
   );
 };

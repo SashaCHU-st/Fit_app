@@ -39,12 +39,8 @@ const ParticleBackground = () => {
       transparent: true,
       opacity: 0.18,
       roughness: 0.05,
-      metalness: 0.0,
       transmission: 1.0,
       thickness: 0.15,
-      ior: 1.25,
-      clearcoat: 1.0,
-      clearcoatRoughness: 0.05,
     });
 
     const count = 200;
@@ -99,20 +95,6 @@ const ParticleBackground = () => {
     const controls = new OrbitControls(camera, canvas);
     controls.enableDamping = true;
 
-    // const handleResize = () => {
-    //   viewport.width = window.innerWidth;
-    //   viewport.height = window.innerHeight;
-
-    //   camera.aspect = viewport.width / viewport.height;
-    //   camera.updateProjectionMatrix();
-
-    //   renderer.setSize(viewport.width, viewport.height);
-    //   renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-    //   renderer.render(scene, camera);
-    // };
-
-    // window.addEventListener("resize", handleResize);
-
     let frameId = 0;
     const animate = () => {
       controls.update();
@@ -122,7 +104,6 @@ const ParticleBackground = () => {
     frameId = window.requestAnimationFrame(animate);
 
     return () => {
-      // window.removeEventListener("resize", handleResize);
       window.cancelAnimationFrame(frameId);
 
       controls.dispose();

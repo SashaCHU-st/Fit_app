@@ -30,3 +30,18 @@ export const CenterContainer = styled.div`
   z-index: 1;
   margin-top: 24px;
 `;
+
+export const FrameWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  max-width: 720px;
+  box-sizing: border-box;
+  text-align: center;
+  padding: 0 16px;
+  // needed to make page height to centralize it with justify-content:center
+  min-height: calc(100vh - 120px);
+  justify-content: center;
+`;

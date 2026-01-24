@@ -1,7 +1,7 @@
 import { TitleH1, TitleH2 } from "../ui/Title/styles";
 import FoodLog from "./FoodLog";
 import AmountFoodLog from "./AmountFoodLog";
-import CalculateCaloriesButton from "./CalculateCaloriesButton";
+import CalculateCaloriesButton from "./CalculateNutritionButton";
 import MealTypeSelect from "./MealTypeSelect";
 
 import WarningAlert from "./WarningAlert";

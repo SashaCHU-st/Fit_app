@@ -4,9 +4,9 @@ import {
   LegendHigh,
   LegendItem,
   LegendLow,
-} from "../ui/Legend/Legend";
+} from "./styles";
 
-const LegendItems = () => {
+const NutritionLegend = () => {
   return (
     <Legend>
       <LegendItem>
@@ -22,4 +22,4 @@ const LegendItems = () => {
   );
 };
 
-export default LegendItems;
+export default NutritionLegend;
