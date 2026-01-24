@@ -165,6 +165,9 @@ Enter the food amount in grams.
 <img width="400" height="600" alt="image" src="https://github.com/user-attachments/assets/fcb55ba3-f0cc-44d0-a013-4c9868c2d889" />
 
 #### Nutrition Calculator
+##### Mini Demo gif
+![Mini Demo gif](https://github.com/user-attachments/assets/6552ceb6-da57-4fcc-ae5d-54b8d3404264)
+
 ##### Valid Form
 ##### Initial form
 <img width="400" height="600" alt="image" src="https://github.com/user-attachments/assets/8921305a-140f-4bb5-8519-1b557fd30154" />
