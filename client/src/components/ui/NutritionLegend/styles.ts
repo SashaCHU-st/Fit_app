@@ -22,7 +22,7 @@ export const LegendLow = styled.span`
   width: 20px;
   height: 20px;
   border-radius: 20px;
-  // border: 1px solid ${colors.border};
+  border: 1px solid ${colors.border};
   background: ${colors.low};
 `;
 export const LegendGood = styled.span`
