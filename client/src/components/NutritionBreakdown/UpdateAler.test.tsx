@@ -7,8 +7,8 @@ const alert =
   "Attention! The Nutrition Breakdown values have not been updated because the inputs have changed. Please click the Calculate Food Nutrition button again to get the updated values.";
 
 configure({ testIdAttribute: "data-test-id" });
-describe("Warning Alert", () => {
-  it("When there is no such food", () => {
+describe("Update Alert", () => {
+  it("shows an update alert when the user changes something in the form after submitting the previous form", () => {
     render(<UpdateAlert update={true} />);
 
     expect(screen.queryByText(alert)).toBeInTheDocument();
@@ -18,7 +18,7 @@ describe("Warning Alert", () => {
     );
   });
 
-  it("When there is np error, then warning alert is not visible", async () => {
+  it("when there is no update, then update alert is not visible", async () => {
     render(<UpdateAlert update={false} />);
 
     expect(screen.queryByText(alert)).not.toBeInTheDocument();

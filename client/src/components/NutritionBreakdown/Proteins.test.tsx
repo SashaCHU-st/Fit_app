@@ -16,14 +16,14 @@ describe("Proteins", () => {
 
     expect(screen.getByTestId("proteins")).toBeInTheDocument();
   });
-  it("renders Proteins amount", () => {
+  it("renders Proteins value", () => {
     render(<Proteins value={222} mealType="breakfast" />);
 
     expect(screen.getByText("Proteins")).toBeInTheDocument();
     const proteins = screen.getByTestId("proteins");
     expect(proteins).toHaveTextContent("222.00");
   });
-  it("renders Proteins amount with decimals", () => {
+  it("renders Proteins value with decimals", () => {
     render(<Proteins value={222.22} mealType="breakfast" />);
 
     expect(screen.getByText("Proteins")).toBeInTheDocument();
@@ -31,28 +31,28 @@ describe("Proteins", () => {
     expect(proteins).toHaveTextContent("222.22");
   });
 
-  it("renders Proteins amount with decimals rounded", () => {
+  it("renders Proteins value with decimals rounded", () => {
     render(<Proteins value={222.2222222} mealType="breakfast" />);
 
     expect(screen.getByText("Proteins")).toBeInTheDocument();
     const proteins = screen.getByTestId("proteins");
     expect(proteins).toHaveTextContent("222.22");
   });
-  it("renders Proteins amount with decimals rounded with .229999 after decimals", () => {
+  it("renders Proteins value with decimals rounded with .229999 after decimals", () => {
     render(<Proteins value={222.22999999} mealType="breakfast" />);
 
     expect(screen.getByText("Proteins")).toBeInTheDocument();
     const proteins = screen.getByTestId("proteins");
     expect(proteins).toHaveTextContent("222.23");
   });
-  it("renders Proteins amount with decimals rounded with .999999 after decimals", () => {
+  it("renders Proteins value with decimals rounded with .999999 after decimals", () => {
     render(<Proteins value={222.99999999} mealType="breakfast" />);
 
     expect(screen.getByText("Proteins")).toBeInTheDocument();
     const proteins = screen.getByTestId("proteins");
     expect(proteins).toHaveTextContent("223.00");
   });
-  it("renders Proteins amount with decimals rounded with .99 after decimals (user input .99)", () => {
+  it("renders Proteins value with decimals rounded with .99 after decimals (user input .99)", () => {
     render(<Proteins value={222.99} mealType="breakfast" />);
 
     expect(screen.getByText("Proteins")).toBeInTheDocument();
@@ -60,7 +60,7 @@ describe("Proteins", () => {
     expect(proteins).toHaveTextContent("222.99");
   });
 
-  it("get Flag return that high flag, so data-flag became low", () => {
+  it("Get the flag; if it returns a low flag, then data-flag becomes low", () => {
     mockGetFlag.mockReturnValue("low");
     render(<Proteins value={222.99} mealType="breakfast" />);
 

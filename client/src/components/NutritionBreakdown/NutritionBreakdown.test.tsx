@@ -22,7 +22,16 @@ const setup = (overrides = {}) =>
   render(<NutritionBreakdown {...validForm} {...overrides} />);
 
 describe("Nutrition Breakdown", () => {
-  it("Checking if all titles re on place", () => {
+  it("each of the element has own test-id", () => {
+    render(<NutritionBreakdown {...validForm} />);
+
+    expect(screen.getByTestId("amountFoodLogBreakdown")).toBeInTheDocument();
+    expect(screen.getByTestId("calories")).toBeInTheDocument();
+    expect(screen.getByTestId("proteins")).toBeInTheDocument();
+    expect(screen.getByTestId("fat")).toBeInTheDocument();
+    expect(screen.getByTestId("carbohydrates")).toBeInTheDocument();
+  });
+  it("checking if all titles are in place", () => {
     setup();
 
     expect(screen.getByTestId(/amountFoodLogBreakdown/i)).toBeInTheDocument();
@@ -38,13 +47,13 @@ describe("Nutrition Breakdown", () => {
     ).not.toBeInTheDocument();
   });
 
-  it("Shows Update alert when something changed in the form, update = true", () => {
+  it("shows Update alert when something changed in the form, update = true", () => {
     setup({ update: true, calories: 200 });
 
     expect(screen.queryByText(updateAlertText)).toBeInTheDocument();
   });
 
-  it("Checking if nutrition got correct values, and data-row-value is correct", () => {
+  it("checking if nutrition breakdown got correct values, and data-row-value is correct", () => {
     render(<NutritionBreakdown {...validForm} />);
 
     expect(screen.getByText("Food amount (in grams)")).toBeInTheDocument();
@@ -68,13 +77,4 @@ describe("Nutrition Breakdown", () => {
     expect(carbohydrates).toHaveAttribute("data-raw-value", "2000");
   });
 
-  it("each of the element has own test-id", () => {
-    render(<NutritionBreakdown {...validForm} />);
-
-    expect(screen.getByTestId("amountFoodLogBreakdown")).toBeInTheDocument();
-    expect(screen.getByTestId("calories")).toBeInTheDocument();
-    expect(screen.getByTestId("proteins")).toBeInTheDocument();
-    expect(screen.getByTestId("fat")).toBeInTheDocument();
-    expect(screen.getByTestId("carbohydrates")).toBeInTheDocument();
-  });
 });

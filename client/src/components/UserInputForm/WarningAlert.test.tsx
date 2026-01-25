@@ -5,7 +5,7 @@ import WarningAlert from "./WarningAlert";
 
 configure({ testIdAttribute: "data-test-id" });
 describe("Warning Alert", () => {
-  it("When there is no such food", () => {
+  it("shows warning alert, if for example no such as food exists in API", () => {
     render(
       <WarningAlert value="Food with such as name xxxxxxxxxxxxx not exist" />,
     );
@@ -16,7 +16,7 @@ describe("Warning Alert", () => {
     expect(screen.getByTestId("warning")).toHaveAttribute("data-open", "true");
   });
 
-  it("When there is np error, then warning alert is not visible", async () => {
+  it("When there is no error, then warning alert is not visible", async () => {
     render(<WarningAlert value="" />);
 
     expect(screen.getByTestId("warning")).toHaveAttribute("data-open", "false");

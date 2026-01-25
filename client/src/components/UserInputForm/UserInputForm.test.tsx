@@ -241,7 +241,7 @@ describe("User Input Form", () => {
     expect(onSubmit).not.toHaveBeenCalled();
   });
 
-  it("onChange called every time when inputs changes", async () => {
+  it("onChangeForm called every time when inputs changes", async () => {
     const onChangeForm = vi.fn();
 
     render(
@@ -267,7 +267,7 @@ describe("User Input Form", () => {
 
     expect(onChangeForm).toHaveBeenCalledTimes(4);
   });
-  it("if the Food log was empty and user pushed button Randomize food the error message will disappear", async () => {
+  it("if the food log was empty and the user pressed the “Randomize food” button, the error message will disappear.", async () => {
     const onChangeForm = vi.fn();
     const onInvalidSubmit = vi.fn();
     const onSubmit = vi.fn();

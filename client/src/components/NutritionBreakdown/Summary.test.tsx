@@ -29,7 +29,7 @@ describe("Summary", () => {
     expect(screen.getByText("For breakfast:")).toBeInTheDocument();
   });
 
-  it("if all nutritions within the good range, show message that You have a great choice for today", () => {
+  it("if all nutrients are within the good range, show a message: You’ve made a great choice for today.", () => {
     mockSummaryFlag.mockReturnValue({
       low: [],
       lowList: "",
@@ -44,7 +44,7 @@ describe("Summary", () => {
     ).toBeInTheDocument();
   });
 
-  it("when summary flag returns low, then appear message about that some element in low", () => {
+  it("when the summary flag returns low, display a message indicating that some element is low, and gives advice", () => {
     mockSummaryFlag.mockReturnValue({
       low: ["fat"],
       lowList: "fat",
@@ -55,7 +55,7 @@ describe("Summary", () => {
     render(<Summary {...validForm} />);
     expect(screen.getByText(/You are low on/i)).toBeInTheDocument();
   });
-  it("when summary flag returns low, then appear message about that some element in low", () => {
+  it("when the summary flag returns low, display a message indicating that some element is low, and gives advice (different element from previous test)", () => {
     mockSummaryFlag.mockReturnValue({
       low: ["proteins"],
       lowList: "proteins",
@@ -67,7 +67,7 @@ describe("Summary", () => {
     expect(screen.getByText(/You are low on/i)).toBeInTheDocument();
     expect(screen.getByText(/protein/i)).toBeInTheDocument();
   });
-  it("when summary flag returns low and high, then appear message about that some element in low and high", () => {
+  it("when the summary flag returns low and high, display a message indicating that some element is low and high, shows both messages", () => {
     mockSummaryFlag.mockReturnValue({
       low: ["proteins"],
       lowList: "proteins",
@@ -83,7 +83,7 @@ describe("Summary", () => {
     ).toBeInTheDocument();
     expect(screen.getByText(/fat/i)).toBeInTheDocument();
   });
-  it("when summary Flag does not return high list, message is not appears", () => {
+  it("when summary flag does not return high list, message is not appears", () => {
     mockSummaryFlag.mockReturnValue({
       low: ["protein"],
       lowList: "protein",
@@ -96,7 +96,7 @@ describe("Summary", () => {
       screen.queryByText(/it would be better to reduce/i),
     ).not.toBeInTheDocument();
   });
-  it("summary will be called with correct values", () => {
+  it("summary Flag will be called with correct values", () => {
     mockSummaryFlag.mockReturnValue({
       low: ["protein"],
       lowList: "protein",
