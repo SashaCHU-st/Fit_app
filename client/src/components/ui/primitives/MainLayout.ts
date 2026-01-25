@@ -33,6 +33,8 @@ export const CenterContainer = styled.div`
 
 export const FrameWrapper = styled.div`
   display: flex;
+  border-style: solid;
+  border-color: grey;
   flex-direction: column;
   align-items: center;
   gap: 16px;
@@ -41,8 +43,15 @@ export const FrameWrapper = styled.div`
   box-sizing: border-box;
   text-align: center;
   padding: 0 16px;
+  box-shadow:
+    0px 3px 5px -1px rgb(70, 70, 70),
+    0px 6px 10px 0px rgb(144, 144, 144),
+    0px 1px 18px 0px rgb(123, 123, 123);
+  border-radius: 10%;
   min-height: calc(
-    100vh - 120px
+    70vh - 120px
   ); // needed to make page height to centralize it with justify-content:center
   justify-content: center;
+  background: rgba(255, 255, 255, 0.4);
+  background-filter: blur(6px);
 `;
