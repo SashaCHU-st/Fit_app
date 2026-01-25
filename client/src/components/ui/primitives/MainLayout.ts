@@ -33,7 +33,6 @@ export const CenterContainer = styled.div`
 
 export const FrameWrapper = styled.div`
   display: flex;
-  border-style: solid;
   border-color: grey;
   flex-direction: column;
   align-items: center;
