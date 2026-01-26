@@ -22,10 +22,10 @@ export const StyledAlert = styled.p`
     padding: 16px;
   }
 
-  &[role="info"] {
+  &[role="status"] {
     background-color: ${colors.info};
   }
-  &[role="warning"] {
+  &[role="alert"] {
     background-color: ${colors.warning};
   }
 `;

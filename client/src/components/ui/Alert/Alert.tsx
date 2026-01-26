@@ -3,7 +3,7 @@ import { StyledAlert } from "./styles";
 interface AlertProps {
   children: React.ReactNode;
   "data-test-id": string;
-  role: "info" | "warning";
+  role: "alert" | "status";
   "data-open"?: boolean;
 }
 /**Styled alert used as a warning (no such food)
