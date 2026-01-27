@@ -1,23 +1,34 @@
 export const colors = {
   primary: "#000000",
+  //Button
   buttonText: "#ffffff",
-  buttonTextRandom: "#39a4d6",
+  buttonTextRandom: "#0882bb",
   buttonCalculate: "#009de0",
   buttonRandom: "#d3edf9",
   buttonHover: "#1fa9e4",
   buttonHoverRandom: "#bfe6f8",
-  error: "#d32f2f",
+
+  //Calculator
+  backgroundCalculator: "#ffffff",
+  // Alerts
   info: "#eaf9ffff",
   warning: "#ffe3e3ff",
-  textSecondary: "#6b6b6b",
+
+  //inputs
+  error: "#d32f2f",
   muted: "#6b6b6b",
-  border: "#c4c4c4",
-  background: "#d3edf9",
-  backgroundCalculator: "#ffffff",
-  backgroundButtonNavbar: "#85cbe9",
-  backgroundNavbar: "#ffffffbb",
-  hover: "#6cc5eb",
+
+  //Legend and Flags
+  textSecondary: "#6b6b6b",
   low: "#d0f7ffb7",
   good: "#e1ffd0b7",
   high: "#fce2e2b9",
+  border: "#c4c4c4",
+
+  //MainColor of the page
+  background: "#d3edf9",
+  //Navbar
+  hover: "#6cc5eb",
+  backgroundButtonNavbar: "#85cbe9",
+  backgroundNavbar: "#ffffffbb",
 };

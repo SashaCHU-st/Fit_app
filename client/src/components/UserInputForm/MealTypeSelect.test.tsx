@@ -19,7 +19,7 @@ describe("Meal Type Select", () => {
     expect(onChange).toHaveBeenCalledWith("breakfast", null);
   });
 
-  it("The label is visible for user", () => {
+  it("the label is visible for user", () => {
     const onChange = vi.fn();
 
     render(<MealTypeSelect value="" error={null} onChange={onChange} />);

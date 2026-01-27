@@ -45,7 +45,7 @@ describe("Amount Food log", () => {
     );
   });
 
-  it("The label is visible for user", () => {
+  it("the label is visible for user", () => {
     const onChange = vi.fn();
 
     render(<AmountFoodLog value="" error={null} onChange={onChange} />);

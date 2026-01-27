@@ -11,7 +11,7 @@ const WarningAlert = ({ value }: WarningAlertProps) => {
   return (
     <StyledAlert
       data-test-id="warning"
-      role="warning"
+      role="alert"
       data-open={Boolean(value)}
     >
       {value}

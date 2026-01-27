@@ -65,7 +65,8 @@ http://localhost:5173
 ```bash
 npm run e2e
 ```
-<img width="1134" height="283" alt="image" src="https://github.com/user-attachments/assets/0384f71f-3078-4ded-980f-c5251e116334" />
+<img width="1232" height="304" alt="image" src="https://github.com/user-attachments/assets/5557e001-61ca-4b21-83f3-aa8d1fe9b586" />
+
 
 > Sometimes end-to-end tests take longer.
 

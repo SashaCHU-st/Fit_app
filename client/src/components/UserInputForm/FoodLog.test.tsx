@@ -3,7 +3,7 @@ import { render, screen, fireEvent } from "@testing-library/react";
 import FoodLog from "./FoodLog";
 
 describe("Food Log", () => {
-  it("Calls on change when valid input", () => {
+  it("calls on change when valid input", () => {
     const onChange = vi.fn<(value: string, error: string | null) => void>();
 
     render(<FoodLog value="" error={null} onChange={onChange} />);
@@ -33,7 +33,7 @@ describe("Food Log", () => {
       "Food log cannot be empty. Please enter e.g. banana",
     );
   });
-  it("The label is visible for user", () => {
+  it("the label is visible for user", () => {
     const onChange = vi.fn();
 
     render(<FoodLog value="" error={null} onChange={onChange} />);

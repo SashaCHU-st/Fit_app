@@ -7,7 +7,6 @@ export const ButtonRoot = styled.button`
   min-height: 40px;
   margin-top: 30px;
   padding: 15px 16px;
-  // box-shadow: 5px 5px 5px 5px ${colors.border};
 
   display: inline-flex;
   border-style: ridge;
@@ -42,8 +41,8 @@ export const ButtonRoot = styled.button`
   &:hover {
     background-color: ${colors.buttonHover};
   }
-  &:active {
-    box-shadow: none;
-    transform: translateY(4px);
-  }
+  // &:active {
+  //   box-shadow: none;
+  //   transform: translateY(4px);
+  // }
 `;

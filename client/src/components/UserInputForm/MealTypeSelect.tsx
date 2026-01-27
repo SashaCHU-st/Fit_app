@@ -1,6 +1,6 @@
 import { Select } from "../ui/Select/Select";
 import type { InputProps } from "../../types/form";
-import { options } from "../../types/dropDownOptions";
+import { options } from "../../constants/dropDownOptions";
 
 /**Renders a select input for meal type and notifies the parent
  * when the selected value changes.

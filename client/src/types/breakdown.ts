@@ -1,4 +1,4 @@
-import { MEAL_RECOMMENDATIONS } from "./recommendations";
+import { MEAL_RECOMMENDATIONS } from "../constants/recommendations";
 
 export interface BreakdownProps {
   value: number;

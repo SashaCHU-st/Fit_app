@@ -2,7 +2,7 @@ import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { describe, it, expect, vi } from "vitest";
 import RandomizeFoodLog from "./RandomizeFoodLog";
-import { randomFoodLog } from "../../types/randomFoodLog";
+import { randomFoodLog } from "../../constants/randomFoodLog";
 
 describe("RandomizeFoodLog", () => {
   it("calls onRandomize with a random food value", async () => {

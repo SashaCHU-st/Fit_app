@@ -1,5 +1,5 @@
 import Button from "../ui/Button/Button";
-import { randomFoodLog } from "../../types/randomFoodLog";
+import { randomFoodLog } from "../../constants/randomFoodLog";
 import { getRandomItem } from "../../utils/getRandomItem";
 interface RandomizeFoodLogProps {
   onRandomize: (v: string) => void;

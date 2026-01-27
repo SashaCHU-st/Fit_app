@@ -1,4 +1,4 @@
-import { MEAL_RECOMMENDATIONS } from "../types/recommendations";
+import { MEAL_RECOMMENDATIONS } from "../constants/recommendations";
 export type Flag = "low" | "good" | "high" | null;
 
 /**get Flag for specific micronutriemnets and returns it (needed to display colors for user what is low or high) */

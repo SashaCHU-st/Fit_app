@@ -1,4 +1,4 @@
-import github from "/logo/github.png";
+import github from "/logo/github-black.png";
 import linkedIn from "/logo/linkedIn.png";
 import { LogoLink, LogoWrap } from "./styles";
 import { LogoList } from "./styles";
