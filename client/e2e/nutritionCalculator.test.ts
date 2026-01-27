@@ -5,7 +5,7 @@ test.use({ testIdAttribute: "data-test-id" });
 const nutritionData = {
   products: [
     {
-      product_name: "banana",
+      product_name: "orange",
       nutriments: {
         proteins_100g: 30.6,
         carbohydrates_100g: 50,
@@ -18,7 +18,7 @@ const nutritionData = {
 
 test.describe("Nutrition Calculator", () => {
   test.beforeEach(async ({ page }) => {
-    await page.route("**/cgi/search.pl?search_terms=banana*", (route) =>
+    await page.route("**/cgi/search.pl?search_terms=*", (route) =>
       route.fulfill({
         status: 200,
         contentType: "application/json",
@@ -37,7 +37,7 @@ test.describe("Nutrition Calculator", () => {
     await expect(page.locator('[data-test-id="foodLog"]')).toBeVisible();
     await expect(page.locator('[data-test-id="foodAmount"]')).toBeVisible();
   });
-  test("filling input with valid values", async ({ page }) => {
+  test("after filling the inputs with valid values and pressing the ‘Check Food Nutrition’ button, the Nutrition Breakdown will be displayed.", async ({ page }) => {
     await page.goto("http://localhost:5173/nutritionCalculator");
 
     await expect(
@@ -106,7 +106,7 @@ test.describe("Nutrition Calculator", () => {
     await expect(carbsRow).toHaveAttribute("data-flag", "good");
   });
 ////sometimes fails...neede to fix
-  test("when valid form, it will show nutrition values, if user change something it will show update Alert", async ({
+  test("when the form is valid, nutrition values are displayed. If the user changes any input, an update alert is shown", async ({
     page,
   }) => {
     await page.goto("http://localhost:5173/nutritionCalculator");
@@ -141,20 +141,20 @@ test.describe("Nutrition Calculator", () => {
       .locator("..");
     await expect(carbs.locator('[data-raw-value="5000"]')).toBeVisible();
 
-    await page.getByTestId("foodAmount").fill("200");
+    await page.getByTestId("foodLog").fill("apple");
     await expect(
       page.getByText(
         "Attention! The Nutrition Breakdown values have not been updated because the inputs have changed. Please click the Calculate Food Nutrition button again to get the updated values.",
       ),
     ).toBeVisible();
-    await page.getByTestId("calculateFoodNutrition").click();
-    // await expect(
-    //   page.getByText(
-    //     "Attention! The Nutrition Breakdown values have not been updated because the inputs have changed. Please click the Calculate Food Nutrition button again to get the updated values.",
-    //   ),
-    // ).not.toBeVisible();
+   await page.getByTestId("calculateFoodNutrition").click();
+    await expect(
+      page.getByText(
+        "Attention! The Nutrition Breakdown values have not been updated because the inputs have changed. Please click the Calculate Food Nutrition button again to get the updated values.",
+      ),
+    ).not.toBeVisible();
   });
-  test("shows error when all empty", async ({ page }) => {
+  test("shows an error when all inputs are empty", async ({ page }) => {
     await page.goto("http://localhost:5173/nutritionCalculator");
 
     await page.getByTestId("foodLog").fill("");
@@ -178,7 +178,7 @@ test.describe("Nutrition Calculator", () => {
       }),
     ).not.toBeVisible();
   });
-  test("when all value filled, click button calculated check food nutrition then it should change to loading disabled", async ({
+  test("after all values are filled, clicking the ‘Check Food Nutrition’ button disables it and shows a loading state", async ({
     page,
   }) => {
     await page.goto("http://localhost:5173/nutritionCalculator");
@@ -216,7 +216,7 @@ test.describe("Nutrition Calculator", () => {
     await expect(page.getByText("High", { exact: true })).toBeVisible();
   });
 
-  test("clears meal type error after selection", async ({ page }) => {
+  test("the meal type error is cleared after a selection is made", async ({ page }) => {
     await page.goto("http://localhost:5173/nutritionCalculator");
 
     await page.getByTestId("calculateFoodNutrition").click();
@@ -226,7 +226,7 @@ test.describe("Nutrition Calculator", () => {
     await expect(page.locator("#mealType-helper")).toHaveText("");
   });
 
-  test("recalculates flags when meal type changes", async ({ page }) => {
+  test("flags are recalculated when the meal type changes", async ({ page }) => {
     await page.goto("http://localhost:5173/nutritionCalculator");
 
     await page.getByTestId("foodLog").fill("banana");
@@ -274,7 +274,7 @@ test.describe("Nutrition Calculator", () => {
       }),
     ).not.toBeVisible();
   });
-  test("when typing only spaces shows error on Food log", async ({ page }) => {
+  test("shows an error in the food log when only spaces are entered", async ({ page }) => {
     await page.goto("http://localhost:5173/nutritionCalculator");
 
     await page.getByTestId("foodLog").fill("   ");
