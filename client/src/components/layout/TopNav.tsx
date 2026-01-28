@@ -16,10 +16,12 @@ const TopNav = () => {
         <NavLink to="/nutritionCalculator" className={getNavItemClass}>
           Nutrition Calculator
         </NavLink>
+        <NavLink to="/exercises" className={getNavItemClass}>
+          Exercises
+        </NavLink>
         <NavLink to="/about" className={getNavItemClass}>
           About the project
         </NavLink>
-        {/* <NavItem to="/exercises">Search Exercises</NavItem> */}
       </NavLinks>
     </NavShell>
   );
