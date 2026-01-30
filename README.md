@@ -9,22 +9,29 @@ Playwright***.
 ## Live Demo 
 [Fit App](https://fit-app-project.vercel.app/)
 
-## How to run:
-The project requires **Node.js >= 20**.
-### To check application:
-1. Move to repository
+## How to run
+
+### Prerequisites
+- **Node.js >= 20**
+
+### Setup and run
+1. Clone the repository
+```bash
+git clone <repository-url>
+```
+2. Move to repository
 ```
 cd client
 ```
-1. Install dependencies
+3. Install dependencies
 ```bash
 npm install
 ```
-2. Run the application
+4. Run the application
 ```bash
 npm run dev
 ```
-3. Open in browser http://localhost:5173/
+5. Open in browser http://localhost:5173/
 
 ## Comands
 ### Checking correct types without build
