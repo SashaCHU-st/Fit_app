@@ -1,1 +1,3 @@
 - Create page for exercises with pictures or list?
+- add backend
+- add sevaral food logs
