@@ -2,7 +2,7 @@
 Simple nutrition calculator web app that uses the [***Open Food Facts API***](https://world.openfoodfacts.org/data) to help
 users estimate calories and macros for meals. Built for learning ***React,
 TypeScript, Linaria CSS styling***, component structure, and API integration. Includes
-an interactive ***Three.js*** background and a roadmap for an exercise page. Covered
+an interactive ***Three.js*** background. Covered
 with unit/component tests ***Vitest*** and ***end-to-end tests
 Playwright***.
 
