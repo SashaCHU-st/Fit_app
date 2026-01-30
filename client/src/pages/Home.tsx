@@ -17,11 +17,11 @@ const Home = () => {
             <b>React, TypeScript,Linaria CSS and Three.js</b>, using the{" "}
             <b>Open Food Facts API</b>. This application build to help users
             calculate the nutritional value of their daily meals, such as
-            breakfast, lunch, and dinner. <b>Ready to test it? Head to the
-            Nutrition Calculator page</b>. 
-            <br />The application focuses on
-            promoting healthy habits by making nutrition tracking simple and
-            accessible.
+            breakfast, lunch, and dinner.{" "}
+            <b>Ready to test it? Head to the Nutrition Calculator page</b>.
+            <br />
+            The application focuses on promoting healthy habits by making
+            nutrition tracking simple and accessible.
           </Text>
           <Logo />
         </FrameWrapper>

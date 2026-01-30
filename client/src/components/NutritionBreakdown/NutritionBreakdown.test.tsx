@@ -76,5 +76,4 @@ describe("Nutrition Breakdown", () => {
     const carbohydrates = screen.getByTestId("carbohydrates");
     expect(carbohydrates).toHaveAttribute("data-raw-value", "2000");
   });
-
 });
