@@ -31,7 +31,7 @@ const fetchWithTimeout = async (
     // fetch(resource, options => signal:conroller.signal)
     return await fetch(url, {
       signal: controller.signal,
-      //if controller.about() then fetch catch that and goes to catch
+      //if controller.abort() then fetch catch that and goes to catch
     });
   } catch {
     throw new Error(

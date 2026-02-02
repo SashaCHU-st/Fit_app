@@ -10,7 +10,8 @@ interface InputProps {
   inputMode?: "text" | "decimal";
   onChange: (value: string) => void;
   "data-test-id": string;
-  step?: number;
+  // step?: number;
+  pattern?: string;
 }
 /**Input for Food Log and Food Amount */
 export const Input = ({
@@ -22,8 +23,9 @@ export const Input = ({
   type = "text",
   onChange,
   "data-test-id": testId,
-  step,
+  // step,
   inputMode,
+  pattern,
 }: InputProps) => {
   return (
     <InputWrapper>
@@ -32,7 +34,7 @@ export const Input = ({
       <StyledInput
         id={id}
         type={type}
-        step={step}
+        // step={step}
         value={value}
         data-has-error={Boolean(error)}
         aria-invalid={Boolean(error)}
@@ -40,6 +42,7 @@ export const Input = ({
         placeholder={placeholder}
         data-test-id={testId}
         inputMode={inputMode}
+        pattern={pattern}
         onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
           onChange(e.target.value);
         }}
