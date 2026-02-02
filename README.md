@@ -51,7 +51,10 @@ npm run format:check
 ```
 npm run build
 ```
-
+- ***After building the project, you can preview the production build locally:***
+```bash
+npm run preview
+```
 ### Runs all unit and component tests once with Vitest.
 ```
   npm run test:run
