@@ -1,30 +1,37 @@
 # Fit App
 Simple nutrition calculator web app that uses the [***Open Food Facts API***](https://world.openfoodfacts.org/data) to help
 users estimate calories and macros for meals. Built for learning ***React,
-TypeScript, Linaria styling***, component structure, and API integration. Includes
-an interactive ***Three.js*** background and a roadmap for an exercise page. Covered
+TypeScript, Linaria CSS styling***, component structure, and API integration. Includes
+an interactive ***Three.js*** background. Covered
 with unit/component tests ***Vitest*** and ***end-to-end tests
 Playwright***.
 
 ## Live Demo 
 [Fit App](https://fit-app-project.vercel.app/)
 
-## How to run:
-The project requires **Node.js >= 20**.
-### To check application:
-1. Move to repository
+## How to run
+
+### Prerequisites
+- **Node.js >= 20**
+
+### Setup and run
+1. Clone the repository
+```bash
+git clone <repository-url>
+```
+2. Move to repository
 ```
 cd client
 ```
-1. Install dependencies
+3. Install dependencies
 ```bash
 npm install
 ```
-2. Run the application
+4. Run the application
 ```bash
 npm run dev
 ```
-3. Open in browser http://localhost:5173/
+5. Open in browser http://localhost:5173/
 
 ## Comands
 ### Checking correct types without build
@@ -44,7 +51,10 @@ npm run format:check
 ```
 npm run build
 ```
-
+- ***After building the project, you can preview the production build locally:***
+```bash
+npm run preview
+```
 ### Runs all unit and component tests once with Vitest.
 ```
   npm run test:run

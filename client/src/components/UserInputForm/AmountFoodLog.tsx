@@ -8,12 +8,15 @@ import { validateAmountFoodLogInput } from "../../utils/validate";
 
 const AmountFoodLog = ({ value, error, onChange }: InputProps) => {
   const handleChangeFoodAmount = (value: string) => {
+    if (value.includes(",")) {
+      value = value.replace(",", ".");
+    }
     const validationError = validateAmountFoodLogInput(value);
     onChange(value, validationError);
   };
   return (
     <Input
-      type="number"
+      type="text"
       id="foodAmount"
       label="Food Amount (max 1000 gr)"
       value={value}
@@ -22,6 +25,7 @@ const AmountFoodLog = ({ value, error, onChange }: InputProps) => {
       data-test-id="foodAmount"
       onChange={handleChangeFoodAmount}
       inputMode="decimal"
+      pattern="[0-9]+([.\,][0-9]+)?"
     />
   );
 };
