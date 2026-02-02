@@ -8,6 +8,7 @@ import { Input } from "../ui/Input/Input";
 
 const FoodLog = ({ value, error, onChange }: InputProps) => {
   const handleChangeFoodLog = (value: string) => {
+    console.log("Value=>", value)
     const validationError = validateFoodLogInput(value);
     onChange(value, validationError);
   };

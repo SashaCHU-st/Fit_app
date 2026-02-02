@@ -34,9 +34,7 @@ const fetchWithTimeout = async (
       //if controller.abort() then fetch catch that and goes to catch
     });
   } catch {
-    throw new Error(
-      "Request timeout. Sometimes it takes longer, please try again later :)",
-    );
+    throw new Error("Request timeout. Sometimes it takes longer, please try again later :)");
   } finally {
     clearTimeout(timeoutId);
   }
