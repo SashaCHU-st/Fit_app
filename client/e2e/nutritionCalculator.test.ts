@@ -232,7 +232,7 @@ test.describe("Nutrition Calculator", () => {
     await page.getByTestId("mealType").selectOption("breakfast");
     await expect(page.locator("#mealType-helper")).toHaveText("");
   });
-/// sometime failing, need to fix
+  /// sometime failing, need to fix
   test("flags are recalculated when the meal type changes", async ({
     page,
   }) => {

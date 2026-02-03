@@ -43,8 +43,8 @@ export const useUserInputForm = ({
     newError: Partial<UserFormError>,
   ) => {
     setAlert("");
-    setUserForm((prev)=>({ ...prev, ...newUserForm }));
-    setUserFormError((prev)=>({ ...prev, ...newError }));
+    setUserForm((prev) => ({ ...prev, ...newUserForm }));
+    setUserFormError((prev) => ({ ...prev, ...newError }));
     onChangeForm();
   };
 
