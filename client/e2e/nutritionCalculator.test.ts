@@ -5,7 +5,7 @@ test.use({ testIdAttribute: "data-test-id" });
 const nutritionData = {
   products: [
     {
-      product_name: "orange",
+      product_name: "banana",
       nutriments: {
         proteins_100g: 30.6,
         carbohydrates_100g: 50,
@@ -107,7 +107,7 @@ test.describe("Nutrition Calculator", () => {
       .locator("..");
     await expect(carbsRow).toHaveAttribute("data-flag", "good");
   });
-  ////sometimes fails...neede to fix
+  //sometimes fails...neede to fix
   // test("when the form is valid, nutrition values are displayed. If the user changes any input, an update alert is shown", async ({
   //   page,
   // }) => {
@@ -149,7 +149,10 @@ test.describe("Nutrition Calculator", () => {
   //       "Attention! The Nutrition Breakdown values have not been updated because the inputs have changed. Please click the Calculate Food Nutrition button again to get the updated values.",
   //     ),
   //   ).toBeVisible();
-  //  await page.getByTestId("calculateFoodNutrition").click();
+  //   const button = page.getByTestId("calculateFoodNutrition");
+  //   await expect(button).toBeEnabled();
+  //   await expect(button).toHaveText("Check Food Nutrition");
+  //   await button.click();
   //   await expect(
   //     page.getByText(
   //       "Attention! The Nutrition Breakdown values have not been updated because the inputs have changed. Please click the Calculate Food Nutrition button again to get the updated values.",
@@ -229,7 +232,7 @@ test.describe("Nutrition Calculator", () => {
     await page.getByTestId("mealType").selectOption("breakfast");
     await expect(page.locator("#mealType-helper")).toHaveText("");
   });
-
+/// sometime failing, need to fix
   test("flags are recalculated when the meal type changes", async ({
     page,
   }) => {
@@ -245,9 +248,16 @@ test.describe("Nutrition Calculator", () => {
         name: /Here’s your nutrition breakdown for/i,
       }),
     ).toBeVisible();
+    const carbsRowBefore = page
+      .getByText("Carbohydrates", { exact: true })
+      .locator("..");
+    await expect(carbsRowBefore).toHaveAttribute("data-flag", "good");
 
     await page.getByTestId("mealType").selectOption("lunch");
-    await page.getByTestId("calculateFoodNutrition").click();
+    const button = page.getByTestId("calculateFoodNutrition");
+    await expect(button).toBeEnabled();
+    await expect(button).toHaveText("Check Food Nutrition");
+    await button.click();
 
     await expect(
       page.getByRole("heading", {
@@ -255,10 +265,10 @@ test.describe("Nutrition Calculator", () => {
       }),
     ).toBeVisible();
 
-    const carbsRow = page
+    const carbsRowAfter = page
       .getByText("Carbohydrates", { exact: true })
       .locator("..");
-    await expect(carbsRow).toHaveAttribute("data-flag", "low");
+    await expect(carbsRowAfter).toHaveAttribute("data-flag", "low");
   });
 
   test("shows validation error for invalid amount and blocks breakdown", async ({
