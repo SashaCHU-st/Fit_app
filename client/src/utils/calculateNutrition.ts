@@ -14,15 +14,15 @@ export const calculateNutrition = async ({
   const amountFoodLogBreakDown = Number(amountFoodLogInput);
   const nutriments = data.products[0].nutriments;
 
-  const carbo = (nutriments.carbohydrates_100g * amountFoodLogBreakDown) / 100;
-  const protein = (nutriments.proteins_100g * amountFoodLogBreakDown) / 100;
+  const carbohydrates = (nutriments.carbohydrates_100g * amountFoodLogBreakDown) / 100;
+  const proteins = (nutriments.proteins_100g * amountFoodLogBreakDown) / 100;
   const fat = (nutriments.fat_100g * amountFoodLogBreakDown) / 100;
-  const cal = (nutriments["energy-kcal_100g"] * amountFoodLogBreakDown) / 100;
+  const calories = (nutriments["energy-kcal_100g"] * amountFoodLogBreakDown) / 100;
 
   return {
-    calories: cal,
-    carbohydrates: carbo,
-    proteins: protein,
+    calories,
+    carbohydrates,
+    proteins,
     fat,
     amountFoodLogBreakDown,
     mealType,
