@@ -1,5 +1,4 @@
 import { TitleH2 } from "../ui/Title/styles";
-import { styled } from "@linaria/react";
 import AmountFoodLogBreakDown from "./AmountFoodLogBreakDown";
 import Calories from "./Calories";
 import Fat from "./Fat";
@@ -9,12 +8,11 @@ import Summary from "./Summary";
 import UpdateAlert from "./UpdateAlert";
 import LegendItems from "../ui/NutritionLegend/NutritionLegend";
 import type { NutritionBreakdownData } from "../../types/form";
+import { DetailsList } from "../ui/primitives/DetailsList";
 
 /**Parent component that renders the full nutrition breakdown.
  * passes values to children components
  */
-
-const DetailsList = styled.dl``;
 const NutritionBreakdown = ({
   foodLogInput,
   mealType,

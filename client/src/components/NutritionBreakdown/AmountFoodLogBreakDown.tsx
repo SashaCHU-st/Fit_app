@@ -17,7 +17,7 @@ const AmountFoodLogBreakDown = ({ value }: AmountFoodProps) => {
         data-raw-value={Math.round(value * 100)}
         variant="small"
       >
-        {Number(value).toFixed(2)} gr
+        {value.toFixed(2)} gr
       </Text>
     </Row>
   );
