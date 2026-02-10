@@ -15,23 +15,19 @@ Playwright***.
 - **Node.js >= 20**
 
 ### Setup and run
-1. Clone the repository
+1. Clone and move to repository
 ```bash
-git clone <repository-url>
+cd Fit_app/client
 ```
-2. Move to repository
-```
-cd client
-```
-3. Install dependencies
+2. Install dependencies
 ```bash
 npm install
 ```
-4. Run the application
+3. Run the application
 ```bash
 npm run dev
 ```
-5. Open in browser http://localhost:5173/
+4. Open in browser http://localhost:5173/
 
 ## Comands
 ### Checking correct types without build
