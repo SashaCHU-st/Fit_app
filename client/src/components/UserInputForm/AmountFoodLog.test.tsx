@@ -41,7 +41,7 @@ describe("Amount Food log", () => {
     expect(onChange).toBeCalledTimes(1);
     expect(onChange).toHaveBeenCalledWith(
       "10001",
-      "The Food Amount must be between 0.1 and 1000 (1 kg)",
+      "The Food Amount must be between 1 and 1000 (1 kg)",
     );
   });
 

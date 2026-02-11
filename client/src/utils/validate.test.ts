@@ -18,12 +18,12 @@ describe("Validate Food Amount Log", () => {
 
   it("returns error if negative", () => {
     expect(validateAmountFoodLogInput("0")).toMatch(
-      "The Food Amount must be between 0.1 and 1000 (1 kg)",
+      "The Food Amount must be between 1 and 1000 (1 kg)",
     );
   });
   it("returns error if more then 1 001 ", () => {
     expect(validateAmountFoodLogInput("1001")).toMatch(
-      "The Food Amount must be between 0.1 and 1000 (1 kg)",
+      "The Food Amount must be between 1 and 1000 (1 kg)",
     );
   });
   it("no error if valid number ", () => {

@@ -282,7 +282,7 @@ test.describe("Nutrition Calculator", () => {
     await page.getByTestId("calculateFoodNutrition").click();
 
     await expect(
-      page.getByText("The Food Amount must be between 0.1 and 1000 (1 kg)"),
+      page.getByText("The Food Amount must be between 1 and 1000 (1 kg)"),
     ).toBeVisible();
     await expect(
       page.getByRole("heading", {

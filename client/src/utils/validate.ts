@@ -6,7 +6,7 @@ export const validateAmountFoodLogInput = (raw: string): string | null => {
   const num = Number(raw);
   if (num < 0) return "Food amount log cannot be negative";
   if (num < 1 || num > 1000)
-    return "The Food Amount must be between 0.1 and 1000 (1 kg)";
+    return "The Food Amount must be between 1 and 1000 (1 kg)";
   return null;
 };
 

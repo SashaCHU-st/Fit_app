@@ -171,7 +171,7 @@ describe("User Input Form", () => {
 
     expect(
       await screen.findAllByText(
-        "The Food Amount must be between 0.1 and 1000 (1 kg)",
+        "The Food Amount must be between 1 and 1000 (1 kg)",
       ),
     ).toHaveLength(1);
 
