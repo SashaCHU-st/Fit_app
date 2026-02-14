@@ -5,7 +5,7 @@ import NutritionBreakdown from "./NutritionBreakdown";
 configure({ testIdAttribute: "data-test-id" });
 
 const updateAlertText =
-  "Attention! The Nutrition Breakdown values have not been updated because the inputs have changed. Please click the Calculate Food Nutrition button again to get the updated values.";
+  "Attention! The Nutrition Breakdown values have not been updated because the inputs have changed. Please click the Check Food Nutrition button again to get the updated values.";
 
 const validForm = {
   update: false,

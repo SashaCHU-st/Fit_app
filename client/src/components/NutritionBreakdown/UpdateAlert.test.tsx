@@ -4,7 +4,7 @@ import "@testing-library/jest-dom";
 import UpdateAlert from "./UpdateAlert";
 
 const alert =
-  "Attention! The Nutrition Breakdown values have not been updated because the inputs have changed. Please click the Calculate Food Nutrition button again to get the updated values.";
+  "Attention! The Nutrition Breakdown values have not been updated because the inputs have changed. Please click the Check Food Nutrition button again to get the updated values.";
 
 configure({ testIdAttribute: "data-test-id" });
 describe("Update Alert", () => {

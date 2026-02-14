@@ -7,7 +7,7 @@ interface UpdateAlertProps {
  */
 
 const message =
-  "Attention! The Nutrition Breakdown values have not been updated because the inputs have changed. Please click the Calculate Food Nutrition button again to get the updated values.";
+  "Attention! The Nutrition Breakdown values have not been updated because the inputs have changed. Please click the Check Food Nutrition button again to get the updated values.";
 const UpdateAlert = ({ update }: UpdateAlertProps) => {
   return (
     <Alert data-test-id="updateAlert" role="status" data-open={Boolean(update)}>

@@ -146,7 +146,7 @@ test.describe("Nutrition Calculator", () => {
   //   await page.getByTestId("foodLog").fill("apple");
   //   await expect(
   //     page.getByText(
-  //       "Attention! The Nutrition Breakdown values have not been updated because the inputs have changed. Please click the Calculate Food Nutrition button again to get the updated values.",
+  //       "Attention! The Nutrition Breakdown values have not been updated because the inputs have changed. Please click the Check Food Nutrition button again to get the updated values.",
   //     ),
   //   ).toBeVisible();
   //   const button = page.getByTestId("calculateFoodNutrition");
@@ -155,7 +155,7 @@ test.describe("Nutrition Calculator", () => {
   //   await button.click();
   //   await expect(
   //     page.getByText(
-  //       "Attention! The Nutrition Breakdown values have not been updated because the inputs have changed. Please click the Calculate Food Nutrition button again to get the updated values.",
+  //       "Attention! The Nutrition Breakdown values have not been updated because the inputs have changed. Please click the Check Food Nutrition button again to get the updated values.",
   //     ),
   //   ).not.toBeVisible();
   // });
