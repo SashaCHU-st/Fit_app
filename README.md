@@ -119,7 +119,7 @@ Enter the food amount in grams.
 **Validation**
 - Cannot be negative.  
   Error: **“Food amount cannot be negative.”**
-- Must be between **0.1 and 1000 grams (1 kg)**.
+- Must be between **1 and 1000 grams (1 kg)**.
 - Cannot be empty.
 
 ---
