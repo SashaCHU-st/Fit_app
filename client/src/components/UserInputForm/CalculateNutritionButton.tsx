@@ -1,9 +1,9 @@
 import Button from "../ui/Button/Button";
 import { Spinner } from "../ui/primitives/Spinner";
 
-type CalculateNutritionButtonProps = {
+interface CalculateNutritionButtonProps {
   loading: boolean;
-};
+}
 /**Submit button that sends user input values for nutrition calculation.
  */
 
