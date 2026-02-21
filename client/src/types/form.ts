@@ -18,7 +18,6 @@ export interface InputProps {
 export interface NutritionBreakdownData {
   foodLogInput: string;
   mealType: string;
-  update?: boolean;
   calories: number;
   proteins: number;
   carbohydrates: number;

@@ -12,26 +12,26 @@ vi.mock("../../utils/getFlag", () => ({
 const mockGetFlag = vi.mocked(getFlag);
 describe("Fat", () => {
   it("checking the correct data-test-id", () => {
-    render(<Fat value={222} mealType="breakfast" />);
+    render(<Fat value={222} flag="low" />);
 
     expect(screen.getByTestId("fat")).toBeInTheDocument();
   });
   it("renders calories value", () => {
-    render(<Fat value={222} mealType="breakfast" />);
+    render(<Fat value={222} flag="low" />);
 
     expect(screen.getByText("Fat")).toBeInTheDocument();
     const fat = screen.getByTestId("fat");
     expect(fat).toHaveAttribute("data-test-id", "fat");
   });
   it("renders Fat value", () => {
-    render(<Fat value={222} mealType="breakfast" />);
+    render(<Fat value={222} flag="low" />);
 
     expect(screen.getByText("Fat")).toBeInTheDocument();
     const fat = screen.getByTestId("fat");
     expect(fat).toHaveTextContent("222.00");
   });
   it("renders Fat value with decimals", () => {
-    render(<Fat value={222.22} mealType="breakfast" />);
+    render(<Fat value={222.22} flag="low" />);
 
     expect(screen.getByText("Fat")).toBeInTheDocument();
     const fat = screen.getByTestId("fat");
@@ -39,28 +39,28 @@ describe("Fat", () => {
   });
 
   it("renders Fat value with decimals rounded", () => {
-    render(<Fat value={222.2222222} mealType="breakfast" />);
+    render(<Fat value={222.2222222} flag="low" />);
 
     expect(screen.getByText("Fat")).toBeInTheDocument();
     const fat = screen.getByTestId("fat");
     expect(fat).toHaveTextContent("222.22");
   });
   it("renders Fat value with decimals rounded with .229999 after decimals", () => {
-    render(<Fat value={222.22999999} mealType="breakfast" />);
+    render(<Fat value={222.22999999} flag="low" />);
 
     expect(screen.getByText("Fat")).toBeInTheDocument();
     const fat = screen.getByTestId("fat");
     expect(fat).toHaveTextContent("222.23");
   });
   it("renders Fat value with decimals rounded with .999999 after decimals", () => {
-    render(<Fat value={222.99999999} mealType="breakfast" />);
+    render(<Fat value={222.99999999} flag="low" />);
 
     expect(screen.getByText("Fat")).toBeInTheDocument();
     const fat = screen.getByTestId("fat");
     expect(fat).toHaveTextContent("223.00");
   });
   it("renders Fat value with decimals rounded with .99 after decimals (user input .99)", () => {
-    render(<Fat value={222.99} mealType="breakfast" />);
+    render(<Fat value={222.99} flag="low" />);
 
     expect(screen.getByText("Fat")).toBeInTheDocument();
     const fat = screen.getByTestId("fat");
@@ -69,7 +69,7 @@ describe("Fat", () => {
 
   it("get the flag,if it returns a low flag, then data-flag becomes low.", () => {
     mockGetFlag.mockReturnValue("low");
-    render(<Fat value={222.99} mealType="breakfast" />);
+    render(<Fat value={222.99} flag="low" />);
 
     expect(screen.getByText("Fat")).toBeInTheDocument();
     const fatRow = screen.getByTestId("fat").closest("[data-flag]");

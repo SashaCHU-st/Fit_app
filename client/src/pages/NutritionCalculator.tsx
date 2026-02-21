@@ -33,16 +33,7 @@ const NutritionCalculator = () => {
           />
           <BreakdownWrapper data-open={Boolean(formData)}>
             {formData && (
-              <NutritionBreakdown
-                foodLogInput={formData.foodLogInput}
-                mealType={formData.mealType}
-                update={update}
-                calories={formData.calories}
-                proteins={formData.proteins}
-                carbohydrates={formData.carbohydrates}
-                fat={formData.fat}
-                amountFoodLogBreakDown={formData.amountFoodLogBreakDown}
-              />
+              <NutritionBreakdown update={update} formData={formData} />
             )}
           </BreakdownWrapper>
         </CalculatorFrame>

@@ -12,19 +12,19 @@ vi.mock("../../utils/getFlag", () => ({
 const mockGetFlag = vi.mocked(getFlag);
 describe("Proteins", () => {
   it("checking the correct data-test-id", () => {
-    render(<Proteins value={222} mealType="breakfast" />);
+    render(<Proteins value={222} flag="low" />);
 
     expect(screen.getByTestId("proteins")).toBeInTheDocument();
   });
   it("renders Proteins value", () => {
-    render(<Proteins value={222} mealType="breakfast" />);
+    render(<Proteins value={222} flag="low" />);
 
     expect(screen.getByText("Proteins")).toBeInTheDocument();
     const proteins = screen.getByTestId("proteins");
     expect(proteins).toHaveTextContent("222.00");
   });
   it("renders Proteins value with decimals", () => {
-    render(<Proteins value={222.22} mealType="breakfast" />);
+    render(<Proteins value={222.22} flag="low" />);
 
     expect(screen.getByText("Proteins")).toBeInTheDocument();
     const proteins = screen.getByTestId("proteins");
@@ -32,28 +32,28 @@ describe("Proteins", () => {
   });
 
   it("renders Proteins value with decimals rounded", () => {
-    render(<Proteins value={222.2222222} mealType="breakfast" />);
+    render(<Proteins value={222.2222222} flag="low" />);
 
     expect(screen.getByText("Proteins")).toBeInTheDocument();
     const proteins = screen.getByTestId("proteins");
     expect(proteins).toHaveTextContent("222.22");
   });
   it("renders Proteins value with decimals rounded with .229999 after decimals", () => {
-    render(<Proteins value={222.22999999} mealType="breakfast" />);
+    render(<Proteins value={222.22999999} flag="low" />);
 
     expect(screen.getByText("Proteins")).toBeInTheDocument();
     const proteins = screen.getByTestId("proteins");
     expect(proteins).toHaveTextContent("222.23");
   });
   it("renders Proteins value with decimals rounded with .999999 after decimals", () => {
-    render(<Proteins value={222.99999999} mealType="breakfast" />);
+    render(<Proteins value={222.99999999} flag="low" />);
 
     expect(screen.getByText("Proteins")).toBeInTheDocument();
     const proteins = screen.getByTestId("proteins");
     expect(proteins).toHaveTextContent("223.00");
   });
   it("renders Proteins value with decimals rounded with .99 after decimals (user input .99)", () => {
-    render(<Proteins value={222.99} mealType="breakfast" />);
+    render(<Proteins value={222.99} flag="low" />);
 
     expect(screen.getByText("Proteins")).toBeInTheDocument();
     const proteins = screen.getByTestId("proteins");
@@ -62,7 +62,7 @@ describe("Proteins", () => {
 
   it("Get the flag; if it returns a low flag, then data-flag becomes low", () => {
     mockGetFlag.mockReturnValue("low");
-    render(<Proteins value={222.99} mealType="breakfast" />);
+    render(<Proteins value={222.99} flag="low" />);
 
     expect(screen.getByText("Proteins")).toBeInTheDocument();
     const proteinsRow = screen.getByTestId("proteins").closest("[data-flag]");

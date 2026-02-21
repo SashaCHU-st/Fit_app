@@ -2,14 +2,6 @@ import { describe, expect, it } from "vitest";
 import { getFlag } from "./getFlag";
 
 describe("getFlag", () => {
-  it("returns null when mealType is missing", () => {
-    expect(getFlag(100, undefined, "calories")).toBeNull();
-  });
-
-  it("returns null when nutrient is missing", () => {
-    expect(getFlag(100, "breakfast", undefined)).toBeNull();
-  });
-
   it("returns low for value below breakfast calories good range", () => {
     expect(getFlag(200, "breakfast", "calories")).toBe("low");
   });

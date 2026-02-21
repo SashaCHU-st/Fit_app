@@ -1,27 +1,28 @@
 import { render, screen } from "@testing-library/react";
 import { describe, expect, it, vi } from "vitest";
 import Summary from "./Summary";
-import { summaryFlags } from "../../utils/summaryFlags";
+import { flagList } from "../../utils/flagList";
+import type { SummaryProps } from "../../types/breakdown";
 
-vi.mock("../../utils/summaryFlags", () => ({
-  summaryFlags: vi.fn(),
+vi.mock("../../utils/flagList", () => ({
+  flagList: vi.fn(),
 }));
 
-const mockSummaryFlag = vi.mocked(summaryFlags);
-const validForm = {
+const mockFlagList = vi.mocked(flagList);
+const validForm: SummaryProps = {
   mealType: "breakfast",
-  calories: 200,
-  proteins: 100,
-  carbohydrates: 50,
-  fat: 20,
+  sum: [
+    ["calories", "low"],
+    ["proteins", "good"],
+    ["fat", "low"],
+    ["carbs", "low"],
+  ],
 };
 
 describe("Summary", () => {
   it("renders the meal type correctly", () => {
-    mockSummaryFlag.mockReturnValue({
-      low: [],
+    mockFlagList.mockReturnValue({
       lowList: "",
-      high: [],
       highList: "",
     });
     render(<Summary {...validForm} />);
@@ -30,10 +31,8 @@ describe("Summary", () => {
   });
 
   it("if all nutrients are within the good range, show a message: You’ve made a great choice for today.", () => {
-    mockSummaryFlag.mockReturnValue({
-      low: [],
+    mockFlagList.mockReturnValue({
       lowList: "",
-      high: [],
       highList: "",
     });
     render(<Summary {...validForm} />);
@@ -45,10 +44,8 @@ describe("Summary", () => {
   });
 
   it("when the summary flag returns low, display a message indicating that some element is low, and gives advice", () => {
-    mockSummaryFlag.mockReturnValue({
-      low: ["fat"],
+    mockFlagList.mockReturnValue({
       lowList: "fat",
-      high: [],
       highList: "",
     });
 
@@ -56,10 +53,8 @@ describe("Summary", () => {
     expect(screen.getByText(/You are low on/i)).toBeInTheDocument();
   });
   it("when the summary flag returns low, display a message indicating that some element is low, and gives advice (different element from previous test)", () => {
-    mockSummaryFlag.mockReturnValue({
-      low: ["proteins"],
+    mockFlagList.mockReturnValue({
       lowList: "proteins",
-      high: [],
       highList: "",
     });
 
@@ -68,10 +63,8 @@ describe("Summary", () => {
     expect(screen.getByText(/protein/i)).toBeInTheDocument();
   });
   it("when the summary flag returns low and high, display a message indicating that some element is low and high, shows both messages", () => {
-    mockSummaryFlag.mockReturnValue({
-      low: ["proteins"],
+    mockFlagList.mockReturnValue({
       lowList: "proteins",
-      high: ["fat"],
       highList: "fat",
     });
 
@@ -84,10 +77,8 @@ describe("Summary", () => {
     expect(screen.getByText(/fat/i)).toBeInTheDocument();
   });
   it("when summary flag does not return high list, message is not appears", () => {
-    mockSummaryFlag.mockReturnValue({
-      low: ["protein"],
+    mockFlagList.mockReturnValue({
       lowList: "protein",
-      high: [],
       highList: "",
     });
 
@@ -97,20 +88,12 @@ describe("Summary", () => {
     ).not.toBeInTheDocument();
   });
   it("summary Flag will be called with correct values", () => {
-    mockSummaryFlag.mockReturnValue({
-      low: ["protein"],
+    mockFlagList.mockReturnValue({
       lowList: "protein",
-      high: [],
       highList: "",
     });
     render(<Summary {...validForm} />);
 
-    expect(mockSummaryFlag).toHaveBeenCalledWith({
-      mealType: "breakfast",
-      calories: 200,
-      proteins: 100,
-      carbohydrates: 50,
-      fat: 20,
-    });
+    expect(mockFlagList).toHaveBeenCalledWith(validForm.sum);
   });
 });

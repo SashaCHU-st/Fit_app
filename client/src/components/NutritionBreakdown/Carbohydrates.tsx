@@ -1,6 +1,5 @@
 import { Text } from "../ui/Text/Text";
 import { Row } from "../ui/primitives/Row";
-import { getFlag } from "../../utils/getFlag";
 import type { BreakdownProps } from "../../types/breakdown";
 
 /**
@@ -9,9 +8,7 @@ import type { BreakdownProps } from "../../types/breakdown";
  * and values received from the API based on the food log.
  */
 
-const Carbohydrates = ({ value, mealType }: BreakdownProps) => {
-  const flag = getFlag(value, mealType, "carbs");
-
+const Carbohydrates = ({ value, flag }: BreakdownProps) => {
   return (
     <Row data-flag={flag}>
       <Text component="dt" variant="small">

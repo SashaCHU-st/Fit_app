@@ -1,14 +1,10 @@
-import { MEAL_RECOMMENDATIONS } from "../constants/recommendations";
-
 export interface BreakdownProps {
   value: number;
-  mealType: keyof typeof MEAL_RECOMMENDATIONS;
+  flag: string;
 }
 
+export type Flag = "low" | "good" | "high";
 export interface SummaryProps {
-  calories: number;
-  proteins: number;
-  fat: number;
-  carbohydrates: number;
+  sum: [string, Flag][];
   mealType: string;
 }

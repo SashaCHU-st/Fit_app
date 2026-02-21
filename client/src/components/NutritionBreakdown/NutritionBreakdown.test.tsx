@@ -9,13 +9,15 @@ const updateAlertText =
 
 const validForm = {
   update: false,
-  calories: 100,
-  carbohydrates: 20,
-  proteins: 10,
-  fat: 15,
-  amountFoodLogBreakDown: 200,
-  mealType: "breakfast",
-  foodLogInput: "banana",
+  formData: {
+    calories: 100,
+    carbohydrates: 20,
+    proteins: 10,
+    fat: 15,
+    amountFoodLogBreakDown: 200,
+    mealType: "breakfast",
+    foodLogInput: "banana",
+  },
 };
 
 const setup = (overrides = {}) =>
