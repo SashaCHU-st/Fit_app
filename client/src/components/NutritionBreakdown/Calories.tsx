@@ -20,7 +20,7 @@ const Calories = ({ value, flag }: BreakdownProps) => {
         component="dd"
         data-raw-value={Math.round(value) * 100}
       >
-        {value.toFixed(2)} kcal
+        {value.toFixed(2)} kcal ({flag})
       </Text>
     </Row>
   );

@@ -20,7 +20,7 @@ const Carbohydrates = ({ value, flag }: BreakdownProps) => {
         data-raw-value={Math.round(value * 100)}
         variant="small"
       >
-        {value.toFixed(2)} gr
+        {value.toFixed(2)} gr ({flag})
       </Text>
     </Row>
   );
